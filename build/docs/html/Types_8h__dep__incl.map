@@ -1,0 +1,11 @@
+<map id="/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/sdk/include/preventiva/Types.h" name="/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/sdk/include/preventiva/Types.h">
+<area shape="rect" id="node1" title="Tipos básicos compartilhados entre App e Plugins." alt="" coords="699,5,951,91"/>
+<area shape="rect" id="node2" href="$IMachineRepository_8h.html" title="Abstração de acesso a dados de máquinas." alt="" coords="265,146,582,231"/>
+<area shape="rect" id="node7" href="$IMaintenanceService_8h.html" title="Interface para serviços de manutenção preventiva (carregados via plugin DLL)." alt="" coords="606,139,873,239"/>
+<area shape="rect" id="node8" href="$MaintenanceFactory_8h.html" title="Padrão Factory para instanciar estratégias a partir de uma policy." alt="" coords="919,294,1171,379"/>
+<area shape="rect" id="node9" href="$SchedulingStrategy_8h.html" title="Padrão Strategy para cálculo de próxima manutenção." alt="" coords="948,146,1200,231"/>
+<area shape="rect" id="node3" href="$JsonMachineRepository_8h_source.html" title=" " alt="" coords="5,294,313,379"/>
+<area shape="rect" id="node4" href="$ServiceLocator_8h.html" title="Fachada/Service Locator para obter serviços (plugin + repositórios)." alt="" coords="337,294,589,379"/>
+<area shape="rect" id="node6" href="$MaintenanceServicePlugin_8h_source.html" title=" " alt="" coords="613,287,865,387"/>
+<area shape="rect" id="node5" href="$MainWindow_8h_source.html" title=" " alt="" coords="337,435,589,520"/>
+</map>

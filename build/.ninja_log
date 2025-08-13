@@ -1,0 +1,24 @@
+# ninja log v5
+0	489	1755047219192607104	plugins/maintenance_service/PreventivaMaintenancePlugin_autogen/timestamp	add0fbbb1caa3264
+0	489	1755047219192607104	plugins/maintenance_service/PreventivaMaintenancePlugin_autogen/mocs_compilation.cpp	add0fbbb1caa3264
+0	489	1755047219192607104	/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/plugins/maintenance_service/PreventivaMaintenancePlugin_autogen/timestamp	add0fbbb1caa3264
+0	489	1755047219192607104	/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/plugins/maintenance_service/PreventivaMaintenancePlugin_autogen/mocs_compilation.cpp	add0fbbb1caa3264
+1	504	1755047219205605375	app/PreventivaApp_autogen/timestamp	ac4a2f74e91a80ce
+1	504	1755047219205605375	app/PreventivaApp_autogen/mocs_compilation.cpp	ac4a2f74e91a80ce
+1	504	1755047219205605375	/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app/PreventivaApp_autogen/timestamp	ac4a2f74e91a80ce
+1	504	1755047219205605375	/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app/PreventivaApp_autogen/mocs_compilation.cpp	ac4a2f74e91a80ce
+506	550	1755047219248932941	app/CMakeFiles/PreventivaApp.dir/domain/MaintenanceFactory.cpp.o	50103d341ca144b4
+506	555	1755047219261931212	app/CMakeFiles/PreventivaApp.dir/domain/SchedulingStrategy.cpp.o	f43832de29aecd87
+550	3002	1755047221714271546	app/CMakeFiles/PreventivaApp.dir/infrastructure/QtEmailAdapter.cpp.o	859c666b7e251e89
+507	3748	1755047222463838467	app/CMakeFiles/PreventivaApp.dir/infrastructure/ConsoleLogger.cpp.o	3ff75d44ab19f2a6
+490	3994	1755047222710805603	plugins/maintenance_service/CMakeFiles/PreventivaMaintenancePlugin.dir/PreventivaMaintenancePlugin_autogen/mocs_compilation.cpp.o	c79795ff5eeb21f4
+490	4211	1755047222927443442	plugins/maintenance_service/CMakeFiles/PreventivaMaintenancePlugin.dir/MaintenanceServicePlugin.cpp.o	abb95ef8d6730d8f
+505	4611	1755047223326057065	app/CMakeFiles/PreventivaApp.dir/PreventivaApp_autogen/mocs_compilation.cpp.o	20004377dabcbdd4
+4211	4620	1755047223334722578	plugins/libPreventivaMaintenancePlugin.so	b40c8ee5ebd1705b
+505	4687	1755047223404046687	app/CMakeFiles/PreventivaApp.dir/main.cpp.o	5a1c13b07572e558
+507	4790	1755047223508032850	app/CMakeFiles/PreventivaApp.dir/infrastructure/JsonMachineRepository.cpp.o	9a465d80b38e061d
+506	4874	1755047223590355229	app/CMakeFiles/PreventivaApp.dir/ServiceLocator.cpp.o	8876af2fc07fbddd
+505	5269	1755047223984636095	app/CMakeFiles/PreventivaApp.dir/MainWindow.cpp.o	25c19a8067e91578
+5269	5945	1755047224630216854	bin/PreventivaApp	c883b52005ea115d
+0	577	0	docs/CMakeFiles/docs	40b6e99df81d2e7c
+0	577	0	/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/docs/CMakeFiles/docs	40b6e99df81d2e7c

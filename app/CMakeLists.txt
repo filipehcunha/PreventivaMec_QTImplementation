@@ -1,5 +1,5 @@
 set(APP_NAME PreventivaApp)
-qt_wrap_ui(UIS_HDRS MainWindow.ui) # optional for older Qt, AUTOUIC handles modern usage
+ # optional for older Qt, AUTOUIC handles modern usage
 
 add_executable(${APP_NAME}
     main.cpp

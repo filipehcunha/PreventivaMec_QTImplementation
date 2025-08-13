@@ -1,0 +1,4 @@
+<map id="Domain::TimeBasedStrategy" name="Domain::TimeBasedStrategy">
+<area shape="rect" id="node1" title="Por tempo (ex.: +6 meses)" alt="" coords="6,80,215,107"/>
+<area shape="rect" id="node2" href="$classDomain_1_1ISchedulingStrategy.html" title=" " alt="" coords="5,5,216,32"/>
+</map>
