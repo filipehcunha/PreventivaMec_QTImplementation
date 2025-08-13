@@ -1,8 +1,0 @@
-<map id="/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/sdk/include/preventiva/IMaintenanceService.h" name="/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/sdk/include/preventiva/IMaintenanceService.h">
-<area shape="rect" id="node1" title="Interface para serviços de manutenção preventiva (carregados via plugin DLL)." alt="" coords="24,5,291,105"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,153,83,180"/>
-<area shape="rect" id="node3" title=" " alt="" coords="117,228,187,255"/>
-<area shape="rect" id="node4" title=" " alt="" coords="158,153,231,180"/>
-<area shape="rect" id="node5" href="$Types_8h.html" title="Tipos básicos compartilhados entre App e Plugins." alt="" coords="255,153,326,180"/>
-<area shape="rect" id="node6" title=" " alt="" coords="243,228,339,255"/>
-</map>

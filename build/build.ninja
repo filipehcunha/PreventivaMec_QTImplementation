@@ -37,6 +37,18 @@ include CMakeFiles/rules.ninja
 cmake_ninja_workdir = /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/
 
 #############################################
+# Utility command for test
+
+build CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build && /usr/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build test: phony CMakeFiles/test.util
+
+
+#############################################
 # Utility command for edit_cache
 
 build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
@@ -62,6 +74,18 @@ build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 # Write statements declared in CMakeLists.txt:
 # /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/CMakeLists.txt
 # =============================================================================
+
+
+#############################################
+# Utility command for test
+
+build sdk/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/sdk && /usr/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build sdk/test: phony sdk/CMakeFiles/test.util
 
 
 #############################################
@@ -141,6 +165,18 @@ build plugins/libPreventivaMaintenancePlugin.so: CXX_SHARED_LIBRARY_LINKER__Prev
 
 
 #############################################
+# Utility command for test
+
+build plugins/maintenance_service/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/plugins/maintenance_service && /usr/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build plugins/maintenance_service/test: phony plugins/maintenance_service/CMakeFiles/test.util
+
+
+#############################################
 # Utility command for edit_cache
 
 build plugins/maintenance_service/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
@@ -188,7 +224,7 @@ build plugins/maintenance_service/PreventivaMaintenancePlugin_autogen/timestamp 
 #############################################
 # Phony custom command for plugins/maintenance_service/CMakeFiles/PreventivaMaintenancePlugin_autogen_timestamp_deps
 
-build plugins/maintenance_service/CMakeFiles/PreventivaMaintenancePlugin_autogen_timestamp_deps | ${cmake_ninja_workdir}plugins/maintenance_service/CMakeFiles/PreventivaMaintenancePlugin_autogen_timestamp_deps: phony /usr/lib/qt6/libexec/moc /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.2.4 /usr/lib/qt6/libexec/uic
+build plugins/maintenance_service/CMakeFiles/PreventivaMaintenancePlugin_autogen_timestamp_deps | ${cmake_ninja_workdir}plugins/maintenance_service/CMakeFiles/PreventivaMaintenancePlugin_autogen_timestamp_deps: phony /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.2.4 /usr/lib/qt6/libexec/moc /usr/lib/qt6/libexec/uic
 
 
 #############################################
@@ -202,13 +238,118 @@ build plugins/maintenance_service/CMakeFiles/PreventivaMaintenancePlugin_autogen
 # =============================================================================
 
 # =============================================================================
+# Object build statements for STATIC_LIBRARY target PreventivaUI
+
+
+#############################################
+# Order-only phony target for PreventivaUI
+
+build cmake_object_order_depends_target_PreventivaUI: phony || app/PreventivaUI_autogen app/PreventivaUI_autogen/mocs_compilation.cpp app/PreventivaUI_autogen/timestamp app/PreventivaUI_autogen_timestamp_deps
+
+build app/CMakeFiles/PreventivaUI.dir/PreventivaUI_autogen/mocs_compilation.cpp.o: CXX_COMPILER__PreventivaUI_ /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app/PreventivaUI_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_PreventivaUI
+  DEFINES = -DPREVENTIVA_SDK -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB
+  DEP_FILE = app/CMakeFiles/PreventivaUI.dir/PreventivaUI_autogen/mocs_compilation.cpp.o.d
+  FLAGS = -fPIC -std=gnu++17
+  INCLUDES = -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app/PreventivaUI_autogen/include -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/sdk/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets
+  OBJECT_DIR = app/CMakeFiles/PreventivaUI.dir
+  OBJECT_FILE_DIR = app/CMakeFiles/PreventivaUI.dir/PreventivaUI_autogen
+  TARGET_COMPILE_PDB = app/CMakeFiles/PreventivaUI.dir/PreventivaUI.pdb
+  TARGET_PDB = app/libPreventivaUI.pdb
+
+build app/CMakeFiles/PreventivaUI.dir/MainWindow.cpp.o: CXX_COMPILER__PreventivaUI_ /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app/MainWindow.cpp || cmake_object_order_depends_target_PreventivaUI
+  DEFINES = -DPREVENTIVA_SDK -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB
+  DEP_FILE = app/CMakeFiles/PreventivaUI.dir/MainWindow.cpp.o.d
+  FLAGS = -fPIC -std=gnu++17
+  INCLUDES = -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app/PreventivaUI_autogen/include -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/sdk/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets
+  OBJECT_DIR = app/CMakeFiles/PreventivaUI.dir
+  OBJECT_FILE_DIR = app/CMakeFiles/PreventivaUI.dir
+  TARGET_COMPILE_PDB = app/CMakeFiles/PreventivaUI.dir/PreventivaUI.pdb
+  TARGET_PDB = app/libPreventivaUI.pdb
+
+build app/CMakeFiles/PreventivaUI.dir/ServiceLocator.cpp.o: CXX_COMPILER__PreventivaUI_ /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app/ServiceLocator.cpp || cmake_object_order_depends_target_PreventivaUI
+  DEFINES = -DPREVENTIVA_SDK -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB
+  DEP_FILE = app/CMakeFiles/PreventivaUI.dir/ServiceLocator.cpp.o.d
+  FLAGS = -fPIC -std=gnu++17
+  INCLUDES = -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app/PreventivaUI_autogen/include -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/sdk/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets
+  OBJECT_DIR = app/CMakeFiles/PreventivaUI.dir
+  OBJECT_FILE_DIR = app/CMakeFiles/PreventivaUI.dir
+  TARGET_COMPILE_PDB = app/CMakeFiles/PreventivaUI.dir/PreventivaUI.pdb
+  TARGET_PDB = app/libPreventivaUI.pdb
+
+build app/CMakeFiles/PreventivaUI.dir/domain/SchedulingStrategy.cpp.o: CXX_COMPILER__PreventivaUI_ /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app/domain/SchedulingStrategy.cpp || cmake_object_order_depends_target_PreventivaUI
+  DEFINES = -DPREVENTIVA_SDK -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB
+  DEP_FILE = app/CMakeFiles/PreventivaUI.dir/domain/SchedulingStrategy.cpp.o.d
+  FLAGS = -fPIC -std=gnu++17
+  INCLUDES = -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app/PreventivaUI_autogen/include -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/sdk/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets
+  OBJECT_DIR = app/CMakeFiles/PreventivaUI.dir
+  OBJECT_FILE_DIR = app/CMakeFiles/PreventivaUI.dir/domain
+  TARGET_COMPILE_PDB = app/CMakeFiles/PreventivaUI.dir/PreventivaUI.pdb
+  TARGET_PDB = app/libPreventivaUI.pdb
+
+build app/CMakeFiles/PreventivaUI.dir/domain/MaintenanceFactory.cpp.o: CXX_COMPILER__PreventivaUI_ /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app/domain/MaintenanceFactory.cpp || cmake_object_order_depends_target_PreventivaUI
+  DEFINES = -DPREVENTIVA_SDK -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB
+  DEP_FILE = app/CMakeFiles/PreventivaUI.dir/domain/MaintenanceFactory.cpp.o.d
+  FLAGS = -fPIC -std=gnu++17
+  INCLUDES = -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app/PreventivaUI_autogen/include -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/sdk/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets
+  OBJECT_DIR = app/CMakeFiles/PreventivaUI.dir
+  OBJECT_FILE_DIR = app/CMakeFiles/PreventivaUI.dir/domain
+  TARGET_COMPILE_PDB = app/CMakeFiles/PreventivaUI.dir/PreventivaUI.pdb
+  TARGET_PDB = app/libPreventivaUI.pdb
+
+build app/CMakeFiles/PreventivaUI.dir/infrastructure/JsonMachineRepository.cpp.o: CXX_COMPILER__PreventivaUI_ /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app/infrastructure/JsonMachineRepository.cpp || cmake_object_order_depends_target_PreventivaUI
+  DEFINES = -DPREVENTIVA_SDK -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB
+  DEP_FILE = app/CMakeFiles/PreventivaUI.dir/infrastructure/JsonMachineRepository.cpp.o.d
+  FLAGS = -fPIC -std=gnu++17
+  INCLUDES = -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app/PreventivaUI_autogen/include -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/sdk/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets
+  OBJECT_DIR = app/CMakeFiles/PreventivaUI.dir
+  OBJECT_FILE_DIR = app/CMakeFiles/PreventivaUI.dir/infrastructure
+  TARGET_COMPILE_PDB = app/CMakeFiles/PreventivaUI.dir/PreventivaUI.pdb
+  TARGET_PDB = app/libPreventivaUI.pdb
+
+build app/CMakeFiles/PreventivaUI.dir/infrastructure/ConsoleLogger.cpp.o: CXX_COMPILER__PreventivaUI_ /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app/infrastructure/ConsoleLogger.cpp || cmake_object_order_depends_target_PreventivaUI
+  DEFINES = -DPREVENTIVA_SDK -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB
+  DEP_FILE = app/CMakeFiles/PreventivaUI.dir/infrastructure/ConsoleLogger.cpp.o.d
+  FLAGS = -fPIC -std=gnu++17
+  INCLUDES = -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app/PreventivaUI_autogen/include -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/sdk/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets
+  OBJECT_DIR = app/CMakeFiles/PreventivaUI.dir
+  OBJECT_FILE_DIR = app/CMakeFiles/PreventivaUI.dir/infrastructure
+  TARGET_COMPILE_PDB = app/CMakeFiles/PreventivaUI.dir/PreventivaUI.pdb
+  TARGET_PDB = app/libPreventivaUI.pdb
+
+build app/CMakeFiles/PreventivaUI.dir/infrastructure/QtEmailAdapter.cpp.o: CXX_COMPILER__PreventivaUI_ /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app/infrastructure/QtEmailAdapter.cpp || cmake_object_order_depends_target_PreventivaUI
+  DEFINES = -DPREVENTIVA_SDK -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB
+  DEP_FILE = app/CMakeFiles/PreventivaUI.dir/infrastructure/QtEmailAdapter.cpp.o.d
+  FLAGS = -fPIC -std=gnu++17
+  INCLUDES = -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app/PreventivaUI_autogen/include -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/sdk/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets
+  OBJECT_DIR = app/CMakeFiles/PreventivaUI.dir
+  OBJECT_FILE_DIR = app/CMakeFiles/PreventivaUI.dir/infrastructure
+  TARGET_COMPILE_PDB = app/CMakeFiles/PreventivaUI.dir/PreventivaUI.pdb
+  TARGET_PDB = app/libPreventivaUI.pdb
+
+
+# =============================================================================
+# Link build statements for STATIC_LIBRARY target PreventivaUI
+
+
+#############################################
+# Link the static library app/libPreventivaUI.a
+
+build app/libPreventivaUI.a: CXX_STATIC_LIBRARY_LINKER__PreventivaUI_ app/CMakeFiles/PreventivaUI.dir/PreventivaUI_autogen/mocs_compilation.cpp.o app/CMakeFiles/PreventivaUI.dir/MainWindow.cpp.o app/CMakeFiles/PreventivaUI.dir/ServiceLocator.cpp.o app/CMakeFiles/PreventivaUI.dir/domain/SchedulingStrategy.cpp.o app/CMakeFiles/PreventivaUI.dir/domain/MaintenanceFactory.cpp.o app/CMakeFiles/PreventivaUI.dir/infrastructure/JsonMachineRepository.cpp.o app/CMakeFiles/PreventivaUI.dir/infrastructure/ConsoleLogger.cpp.o app/CMakeFiles/PreventivaUI.dir/infrastructure/QtEmailAdapter.cpp.o || app/PreventivaUI_autogen app/PreventivaUI_autogen_timestamp_deps /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.2.4 /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.2.4 /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.2.4
+  OBJECT_DIR = app/CMakeFiles/PreventivaUI.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_COMPILE_PDB = app/CMakeFiles/PreventivaUI.dir/PreventivaUI.pdb
+  TARGET_FILE = app/libPreventivaUI.a
+  TARGET_PDB = app/libPreventivaUI.pdb
+
+# =============================================================================
 # Object build statements for EXECUTABLE target PreventivaApp
 
 
 #############################################
 # Order-only phony target for PreventivaApp
 
-build cmake_object_order_depends_target_PreventivaApp: phony || app/PreventivaApp_autogen app/PreventivaApp_autogen/mocs_compilation.cpp app/PreventivaApp_autogen/timestamp app/PreventivaApp_autogen_timestamp_deps
+build cmake_object_order_depends_target_PreventivaApp: phony || app/PreventivaApp_autogen app/PreventivaApp_autogen/mocs_compilation.cpp app/PreventivaApp_autogen/timestamp app/PreventivaApp_autogen_timestamp_deps cmake_object_order_depends_target_PreventivaUI
 
 build app/CMakeFiles/PreventivaApp.dir/PreventivaApp_autogen/mocs_compilation.cpp.o: CXX_COMPILER__PreventivaApp_ /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app/PreventivaApp_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_PreventivaApp
   DEFINES = -DPREVENTIVA_SDK -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB
@@ -230,76 +371,6 @@ build app/CMakeFiles/PreventivaApp.dir/main.cpp.o: CXX_COMPILER__PreventivaApp_ 
   TARGET_COMPILE_PDB = app/CMakeFiles/PreventivaApp.dir/
   TARGET_PDB = bin/PreventivaApp.pdb
 
-build app/CMakeFiles/PreventivaApp.dir/MainWindow.cpp.o: CXX_COMPILER__PreventivaApp_ /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app/MainWindow.cpp || cmake_object_order_depends_target_PreventivaApp
-  DEFINES = -DPREVENTIVA_SDK -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB
-  DEP_FILE = app/CMakeFiles/PreventivaApp.dir/MainWindow.cpp.o.d
-  FLAGS = -fPIC -std=gnu++17
-  INCLUDES = -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app/PreventivaApp_autogen/include -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/sdk/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets
-  OBJECT_DIR = app/CMakeFiles/PreventivaApp.dir
-  OBJECT_FILE_DIR = app/CMakeFiles/PreventivaApp.dir
-  TARGET_COMPILE_PDB = app/CMakeFiles/PreventivaApp.dir/
-  TARGET_PDB = bin/PreventivaApp.pdb
-
-build app/CMakeFiles/PreventivaApp.dir/ServiceLocator.cpp.o: CXX_COMPILER__PreventivaApp_ /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app/ServiceLocator.cpp || cmake_object_order_depends_target_PreventivaApp
-  DEFINES = -DPREVENTIVA_SDK -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB
-  DEP_FILE = app/CMakeFiles/PreventivaApp.dir/ServiceLocator.cpp.o.d
-  FLAGS = -fPIC -std=gnu++17
-  INCLUDES = -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app/PreventivaApp_autogen/include -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/sdk/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets
-  OBJECT_DIR = app/CMakeFiles/PreventivaApp.dir
-  OBJECT_FILE_DIR = app/CMakeFiles/PreventivaApp.dir
-  TARGET_COMPILE_PDB = app/CMakeFiles/PreventivaApp.dir/
-  TARGET_PDB = bin/PreventivaApp.pdb
-
-build app/CMakeFiles/PreventivaApp.dir/domain/SchedulingStrategy.cpp.o: CXX_COMPILER__PreventivaApp_ /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app/domain/SchedulingStrategy.cpp || cmake_object_order_depends_target_PreventivaApp
-  DEFINES = -DPREVENTIVA_SDK -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB
-  DEP_FILE = app/CMakeFiles/PreventivaApp.dir/domain/SchedulingStrategy.cpp.o.d
-  FLAGS = -fPIC -std=gnu++17
-  INCLUDES = -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app/PreventivaApp_autogen/include -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/sdk/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets
-  OBJECT_DIR = app/CMakeFiles/PreventivaApp.dir
-  OBJECT_FILE_DIR = app/CMakeFiles/PreventivaApp.dir/domain
-  TARGET_COMPILE_PDB = app/CMakeFiles/PreventivaApp.dir/
-  TARGET_PDB = bin/PreventivaApp.pdb
-
-build app/CMakeFiles/PreventivaApp.dir/domain/MaintenanceFactory.cpp.o: CXX_COMPILER__PreventivaApp_ /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app/domain/MaintenanceFactory.cpp || cmake_object_order_depends_target_PreventivaApp
-  DEFINES = -DPREVENTIVA_SDK -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB
-  DEP_FILE = app/CMakeFiles/PreventivaApp.dir/domain/MaintenanceFactory.cpp.o.d
-  FLAGS = -fPIC -std=gnu++17
-  INCLUDES = -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app/PreventivaApp_autogen/include -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/sdk/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets
-  OBJECT_DIR = app/CMakeFiles/PreventivaApp.dir
-  OBJECT_FILE_DIR = app/CMakeFiles/PreventivaApp.dir/domain
-  TARGET_COMPILE_PDB = app/CMakeFiles/PreventivaApp.dir/
-  TARGET_PDB = bin/PreventivaApp.pdb
-
-build app/CMakeFiles/PreventivaApp.dir/infrastructure/JsonMachineRepository.cpp.o: CXX_COMPILER__PreventivaApp_ /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app/infrastructure/JsonMachineRepository.cpp || cmake_object_order_depends_target_PreventivaApp
-  DEFINES = -DPREVENTIVA_SDK -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB
-  DEP_FILE = app/CMakeFiles/PreventivaApp.dir/infrastructure/JsonMachineRepository.cpp.o.d
-  FLAGS = -fPIC -std=gnu++17
-  INCLUDES = -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app/PreventivaApp_autogen/include -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/sdk/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets
-  OBJECT_DIR = app/CMakeFiles/PreventivaApp.dir
-  OBJECT_FILE_DIR = app/CMakeFiles/PreventivaApp.dir/infrastructure
-  TARGET_COMPILE_PDB = app/CMakeFiles/PreventivaApp.dir/
-  TARGET_PDB = bin/PreventivaApp.pdb
-
-build app/CMakeFiles/PreventivaApp.dir/infrastructure/ConsoleLogger.cpp.o: CXX_COMPILER__PreventivaApp_ /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app/infrastructure/ConsoleLogger.cpp || cmake_object_order_depends_target_PreventivaApp
-  DEFINES = -DPREVENTIVA_SDK -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB
-  DEP_FILE = app/CMakeFiles/PreventivaApp.dir/infrastructure/ConsoleLogger.cpp.o.d
-  FLAGS = -fPIC -std=gnu++17
-  INCLUDES = -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app/PreventivaApp_autogen/include -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/sdk/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets
-  OBJECT_DIR = app/CMakeFiles/PreventivaApp.dir
-  OBJECT_FILE_DIR = app/CMakeFiles/PreventivaApp.dir/infrastructure
-  TARGET_COMPILE_PDB = app/CMakeFiles/PreventivaApp.dir/
-  TARGET_PDB = bin/PreventivaApp.pdb
-
-build app/CMakeFiles/PreventivaApp.dir/infrastructure/QtEmailAdapter.cpp.o: CXX_COMPILER__PreventivaApp_ /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app/infrastructure/QtEmailAdapter.cpp || cmake_object_order_depends_target_PreventivaApp
-  DEFINES = -DPREVENTIVA_SDK -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_WIDGETS_LIB
-  DEP_FILE = app/CMakeFiles/PreventivaApp.dir/infrastructure/QtEmailAdapter.cpp.o.d
-  FLAGS = -fPIC -std=gnu++17
-  INCLUDES = -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app/PreventivaApp_autogen/include -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/sdk/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets
-  OBJECT_DIR = app/CMakeFiles/PreventivaApp.dir
-  OBJECT_FILE_DIR = app/CMakeFiles/PreventivaApp.dir/infrastructure
-  TARGET_COMPILE_PDB = app/CMakeFiles/PreventivaApp.dir/
-  TARGET_PDB = bin/PreventivaApp.pdb
-
 
 # =============================================================================
 # Link build statements for EXECUTABLE target PreventivaApp
@@ -308,14 +379,26 @@ build app/CMakeFiles/PreventivaApp.dir/infrastructure/QtEmailAdapter.cpp.o: CXX_
 #############################################
 # Link the executable bin/PreventivaApp
 
-build bin/PreventivaApp: CXX_EXECUTABLE_LINKER__PreventivaApp_ app/CMakeFiles/PreventivaApp.dir/PreventivaApp_autogen/mocs_compilation.cpp.o app/CMakeFiles/PreventivaApp.dir/main.cpp.o app/CMakeFiles/PreventivaApp.dir/MainWindow.cpp.o app/CMakeFiles/PreventivaApp.dir/ServiceLocator.cpp.o app/CMakeFiles/PreventivaApp.dir/domain/SchedulingStrategy.cpp.o app/CMakeFiles/PreventivaApp.dir/domain/MaintenanceFactory.cpp.o app/CMakeFiles/PreventivaApp.dir/infrastructure/JsonMachineRepository.cpp.o app/CMakeFiles/PreventivaApp.dir/infrastructure/ConsoleLogger.cpp.o app/CMakeFiles/PreventivaApp.dir/infrastructure/QtEmailAdapter.cpp.o | /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.2.4 /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.2.4 /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.2.4 /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so || app/PreventivaApp_autogen app/PreventivaApp_autogen_timestamp_deps
-  LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.2.4  /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.2.4  /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.2.4  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libOpenGL.so
+build bin/PreventivaApp: CXX_EXECUTABLE_LINKER__PreventivaApp_ app/CMakeFiles/PreventivaApp.dir/PreventivaApp_autogen/mocs_compilation.cpp.o app/CMakeFiles/PreventivaApp.dir/main.cpp.o | app/libPreventivaUI.a /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.2.4 /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.2.4 /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.2.4 /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so || app/PreventivaApp_autogen app/PreventivaApp_autogen_timestamp_deps app/libPreventivaUI.a
+  LINK_LIBRARIES = app/libPreventivaUI.a  /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.2.4  /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.2.4  /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.2.4  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libOpenGL.so
   OBJECT_DIR = app/CMakeFiles/PreventivaApp.dir
   POST_BUILD = cd /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app && /usr/bin/cmake -E make_directory /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/bin/../plugins && /usr/bin/cmake -E copy_directory /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/plugins /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/bin/../plugins
   PRE_LINK = :
   TARGET_COMPILE_PDB = app/CMakeFiles/PreventivaApp.dir/
   TARGET_FILE = bin/PreventivaApp
   TARGET_PDB = bin/PreventivaApp.pdb
+
+
+#############################################
+# Utility command for test
+
+build app/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app && /usr/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build app/test: phony app/CMakeFiles/test.util
 
 
 #############################################
@@ -342,9 +425,21 @@ build app/rebuild_cache: phony app/CMakeFiles/rebuild_cache.util
 
 
 #############################################
+# Utility command for PreventivaUI_autogen_timestamp_deps
+
+build app/PreventivaUI_autogen_timestamp_deps: phony app/CMakeFiles/PreventivaUI_autogen_timestamp_deps
+
+
+#############################################
+# Utility command for PreventivaUI_autogen
+
+build app/PreventivaUI_autogen: phony app/CMakeFiles/PreventivaUI_autogen app/PreventivaUI_autogen/include/ui_MainWindow.h app/PreventivaUI_autogen/timestamp app/PreventivaUI_autogen/mocs_compilation.cpp app/PreventivaUI_autogen_timestamp_deps
+
+
+#############################################
 # Utility command for PreventivaApp_autogen_timestamp_deps
 
-build app/PreventivaApp_autogen_timestamp_deps: phony app/CMakeFiles/PreventivaApp_autogen_timestamp_deps
+build app/PreventivaApp_autogen_timestamp_deps: phony app/CMakeFiles/PreventivaApp_autogen_timestamp_deps app/libPreventivaUI.a
 
 
 #############################################
@@ -354,9 +449,19 @@ build app/PreventivaApp_autogen: phony app/CMakeFiles/PreventivaApp_autogen app/
 
 
 #############################################
+# Custom command for app/PreventivaUI_autogen/timestamp
+
+build app/PreventivaUI_autogen/timestamp app/PreventivaUI_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}app/PreventivaUI_autogen/timestamp ${cmake_ninja_workdir}app/PreventivaUI_autogen/mocs_compilation.cpp: CUSTOM_COMMAND /usr/lib/qt6/libexec/moc /usr/lib/qt6/libexec/uic || app/PreventivaUI_autogen_timestamp_deps
+  COMMAND = cd /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app && /usr/bin/cmake -E cmake_autogen /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app/CMakeFiles/PreventivaUI_autogen.dir/AutogenInfo.json "" && /usr/bin/cmake -E touch /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app/PreventivaUI_autogen/timestamp && /usr/bin/cmake -E cmake_transform_depfile Ninja gccdepfile /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app/PreventivaUI_autogen/deps /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/CMakeFiles/d/9b8bd37a36164efbfc2754cde31c49816b3870940bcc124cc5cbdabee6ab3be6.d
+  DESC = Automatic MOC and UIC for target PreventivaUI
+  depfile = /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/CMakeFiles/d/9b8bd37a36164efbfc2754cde31c49816b3870940bcc124cc5cbdabee6ab3be6.d
+  restat = 1
+
+
+#############################################
 # Custom command for app/PreventivaApp_autogen/timestamp
 
-build app/PreventivaApp_autogen/timestamp app/PreventivaApp_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}app/PreventivaApp_autogen/timestamp ${cmake_ninja_workdir}app/PreventivaApp_autogen/mocs_compilation.cpp: CUSTOM_COMMAND /usr/lib/qt6/libexec/moc /usr/lib/qt6/libexec/uic || app/PreventivaApp_autogen_timestamp_deps
+build app/PreventivaApp_autogen/timestamp app/PreventivaApp_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}app/PreventivaApp_autogen/timestamp ${cmake_ninja_workdir}app/PreventivaApp_autogen/mocs_compilation.cpp: CUSTOM_COMMAND /usr/lib/qt6/libexec/moc /usr/lib/qt6/libexec/uic || app/PreventivaApp_autogen_timestamp_deps app/PreventivaUI_autogen app/PreventivaUI_autogen_timestamp_deps app/libPreventivaUI.a
   COMMAND = cd /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app && /usr/bin/cmake -E cmake_autogen /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app/CMakeFiles/PreventivaApp_autogen.dir/AutogenInfo.json "" && /usr/bin/cmake -E touch /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app/PreventivaApp_autogen/timestamp && /usr/bin/cmake -E cmake_transform_depfile Ninja gccdepfile /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app/PreventivaApp_autogen/deps /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/CMakeFiles/d/c23784ac2d55ed4d5a5e80a4f1ecdd82a1d9791aa61548107727c4c738f70f1b.d
   DESC = Automatic MOC and UIC for target PreventivaApp
   depfile = /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/CMakeFiles/d/c23784ac2d55ed4d5a5e80a4f1ecdd82a1d9791aa61548107727c4c738f70f1b.d
@@ -364,15 +469,27 @@ build app/PreventivaApp_autogen/timestamp app/PreventivaApp_autogen/mocs_compila
 
 
 #############################################
+# Phony custom command for app/CMakeFiles/PreventivaUI_autogen_timestamp_deps
+
+build app/CMakeFiles/PreventivaUI_autogen_timestamp_deps | ${cmake_ninja_workdir}app/CMakeFiles/PreventivaUI_autogen_timestamp_deps: phony /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.2.4 /usr/lib/qt6/libexec/moc /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.2.4 /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.2.4 /usr/lib/qt6/libexec/uic
+
+
+#############################################
+# Phony custom command for app/CMakeFiles/PreventivaUI_autogen
+
+build app/CMakeFiles/PreventivaUI_autogen app/PreventivaUI_autogen/include/ui_MainWindow.h | ${cmake_ninja_workdir}app/CMakeFiles/PreventivaUI_autogen ${cmake_ninja_workdir}app/PreventivaUI_autogen/include/ui_MainWindow.h: phony app/PreventivaUI_autogen/timestamp || app/PreventivaUI_autogen_timestamp_deps
+
+
+#############################################
 # Phony custom command for app/CMakeFiles/PreventivaApp_autogen_timestamp_deps
 
-build app/CMakeFiles/PreventivaApp_autogen_timestamp_deps | ${cmake_ninja_workdir}app/CMakeFiles/PreventivaApp_autogen_timestamp_deps: phony /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.2.4 /usr/lib/qt6/libexec/moc /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.2.4 /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.2.4 /usr/lib/qt6/libexec/uic
+build app/CMakeFiles/PreventivaApp_autogen_timestamp_deps | ${cmake_ninja_workdir}app/CMakeFiles/PreventivaApp_autogen_timestamp_deps: phony app/libPreventivaUI.a /usr/lib/qt6/libexec/moc /usr/lib/qt6/libexec/uic || app/PreventivaUI_autogen app/PreventivaUI_autogen_timestamp_deps app/libPreventivaUI.a
 
 
 #############################################
 # Phony custom command for app/CMakeFiles/PreventivaApp_autogen
 
-build app/CMakeFiles/PreventivaApp_autogen app/PreventivaApp_autogen/include/ui_MainWindow.h | ${cmake_ninja_workdir}app/CMakeFiles/PreventivaApp_autogen ${cmake_ninja_workdir}app/PreventivaApp_autogen/include/ui_MainWindow.h: phony app/PreventivaApp_autogen/timestamp || app/PreventivaApp_autogen_timestamp_deps
+build app/CMakeFiles/PreventivaApp_autogen app/PreventivaApp_autogen/include/ui_MainWindow.h | ${cmake_ninja_workdir}app/CMakeFiles/PreventivaApp_autogen ${cmake_ninja_workdir}app/PreventivaApp_autogen/include/ui_MainWindow.h: phony app/PreventivaApp_autogen/timestamp || app/PreventivaApp_autogen_timestamp_deps app/PreventivaUI_autogen app/PreventivaUI_autogen_timestamp_deps app/libPreventivaUI.a
 
 # =============================================================================
 # Write statements declared in CMakeLists.txt:
@@ -384,6 +501,18 @@ build app/CMakeFiles/PreventivaApp_autogen app/PreventivaApp_autogen/include/ui_
 # Utility command for docs
 
 build docs/docs: phony docs/CMakeFiles/docs
+
+
+#############################################
+# Utility command for test
+
+build docs/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/docs && /usr/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build docs/test: phony docs/CMakeFiles/test.util
 
 
 #############################################
@@ -417,7 +546,459 @@ build docs/CMakeFiles/docs | ${cmake_ninja_workdir}docs/CMakeFiles/docs: CUSTOM_
   DESC = Gerando documentação Doxygen...
 
 # =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target GuiTests
+
+
+#############################################
+# Order-only phony target for GuiTests
+
+build cmake_object_order_depends_target_GuiTests: phony || cmake_object_order_depends_target_PreventivaUI tests/gui/GuiTests_autogen tests/gui/GuiTests_autogen/mocs_compilation.cpp tests/gui/GuiTests_autogen/timestamp tests/gui/GuiTests_autogen_timestamp_deps
+
+build tests/gui/CMakeFiles/GuiTests.dir/GuiTests_autogen/mocs_compilation.cpp.o: CXX_COMPILER__GuiTests_ /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/gui/GuiTests_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_GuiTests
+  DEFINES = -DPREVENTIVA_SDK -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\"/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/gui\" -DQT_TESTCASE_SOURCEDIR=\"/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/tests/gui\" -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = tests/gui/CMakeFiles/GuiTests.dir/GuiTests_autogen/mocs_compilation.cpp.o.d
+  FLAGS = -fPIC -std=gnu++17
+  INCLUDES = -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/gui/GuiTests_autogen/include -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/sdk/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtTest -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets
+  OBJECT_DIR = tests/gui/CMakeFiles/GuiTests.dir
+  OBJECT_FILE_DIR = tests/gui/CMakeFiles/GuiTests.dir/GuiTests_autogen
+  TARGET_COMPILE_PDB = tests/gui/CMakeFiles/GuiTests.dir/
+  TARGET_PDB = bin/GuiTests.pdb
+
+build tests/gui/CMakeFiles/GuiTests.dir/TestMainWindow.cpp.o: CXX_COMPILER__GuiTests_ /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/tests/gui/TestMainWindow.cpp || cmake_object_order_depends_target_GuiTests
+  DEFINES = -DPREVENTIVA_SDK -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\"/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/gui\" -DQT_TESTCASE_SOURCEDIR=\"/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/tests/gui\" -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = tests/gui/CMakeFiles/GuiTests.dir/TestMainWindow.cpp.o.d
+  FLAGS = -fPIC -std=gnu++17
+  INCLUDES = -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/gui/GuiTests_autogen/include -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/sdk/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtTest -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets
+  OBJECT_DIR = tests/gui/CMakeFiles/GuiTests.dir
+  OBJECT_FILE_DIR = tests/gui/CMakeFiles/GuiTests.dir
+  TARGET_COMPILE_PDB = tests/gui/CMakeFiles/GuiTests.dir/
+  TARGET_PDB = bin/GuiTests.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target GuiTests
+
+
+#############################################
+# Link the executable bin/GuiTests
+
+build bin/GuiTests: CXX_EXECUTABLE_LINKER__GuiTests_ tests/gui/CMakeFiles/GuiTests.dir/GuiTests_autogen/mocs_compilation.cpp.o tests/gui/CMakeFiles/GuiTests.dir/TestMainWindow.cpp.o | /usr/lib/x86_64-linux-gnu/libQt6Test.so.6.2.4 app/libPreventivaUI.a /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.2.4 /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.2.4 /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.2.4 /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so || app/libPreventivaUI.a tests/gui/GuiTests_autogen tests/gui/GuiTests_autogen_timestamp_deps
+  LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libQt6Test.so.6.2.4  app/libPreventivaUI.a  /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.2.4  /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.2.4  /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.2.4  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libOpenGL.so
+  OBJECT_DIR = tests/gui/CMakeFiles/GuiTests.dir
+  POST_BUILD = cd /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/gui && /usr/bin/cmake -E make_directory /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/bin/../plugins && /usr/bin/cmake -E copy_directory /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/plugins /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/bin/../plugins
+  PRE_LINK = :
+  TARGET_COMPILE_PDB = tests/gui/CMakeFiles/GuiTests.dir/
+  TARGET_FILE = bin/GuiTests
+  TARGET_PDB = bin/GuiTests.pdb
+
+
+#############################################
+# Utility command for test
+
+build tests/gui/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/gui && /usr/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build tests/gui/test: phony tests/gui/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build tests/gui/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/gui && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build tests/gui/edit_cache: phony tests/gui/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build tests/gui/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/gui && /usr/bin/cmake --regenerate-during-build -S/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation -B/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build tests/gui/rebuild_cache: phony tests/gui/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for GuiTests_autogen_timestamp_deps
+
+build tests/gui/GuiTests_autogen_timestamp_deps: phony tests/gui/CMakeFiles/GuiTests_autogen_timestamp_deps app/libPreventivaUI.a
+
+
+#############################################
+# Utility command for GuiTests_autogen
+
+build tests/gui/GuiTests_autogen: phony tests/gui/CMakeFiles/GuiTests_autogen tests/gui/GuiTests_autogen/timestamp tests/gui/GuiTests_autogen/mocs_compilation.cpp tests/gui/GuiTests_autogen_timestamp_deps
+
+
+#############################################
+# Custom command for tests/gui/GuiTests_autogen/timestamp
+
+build tests/gui/GuiTests_autogen/timestamp tests/gui/GuiTests_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}tests/gui/GuiTests_autogen/timestamp ${cmake_ninja_workdir}tests/gui/GuiTests_autogen/mocs_compilation.cpp: CUSTOM_COMMAND /usr/lib/qt6/libexec/moc /usr/lib/qt6/libexec/uic || app/PreventivaUI_autogen app/PreventivaUI_autogen_timestamp_deps app/libPreventivaUI.a tests/gui/GuiTests_autogen_timestamp_deps
+  COMMAND = cd /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/gui && /usr/bin/cmake -E cmake_autogen /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/gui/CMakeFiles/GuiTests_autogen.dir/AutogenInfo.json "" && /usr/bin/cmake -E touch /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/gui/GuiTests_autogen/timestamp && /usr/bin/cmake -E cmake_transform_depfile Ninja gccdepfile /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/tests/gui /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/gui /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/gui/GuiTests_autogen/deps /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/CMakeFiles/d/82cc3402309f02330ae2d1d729e6362d6229664b38422d3d6b0df67e80174105.d
+  DESC = Automatic MOC and UIC for target GuiTests
+  depfile = /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/CMakeFiles/d/82cc3402309f02330ae2d1d729e6362d6229664b38422d3d6b0df67e80174105.d
+  restat = 1
+
+
+#############################################
+# Phony custom command for tests/gui/CMakeFiles/GuiTests_autogen_timestamp_deps
+
+build tests/gui/CMakeFiles/GuiTests_autogen_timestamp_deps | ${cmake_ninja_workdir}tests/gui/CMakeFiles/GuiTests_autogen_timestamp_deps: phony app/libPreventivaUI.a /usr/lib/qt6/libexec/moc /usr/lib/x86_64-linux-gnu/libQt6Test.so.6.2.4 /usr/lib/qt6/libexec/uic || app/PreventivaUI_autogen app/PreventivaUI_autogen_timestamp_deps app/libPreventivaUI.a
+
+
+#############################################
+# Phony custom command for tests/gui/CMakeFiles/GuiTests_autogen
+
+build tests/gui/CMakeFiles/GuiTests_autogen | ${cmake_ninja_workdir}tests/gui/CMakeFiles/GuiTests_autogen: phony tests/gui/GuiTests_autogen/timestamp || app/PreventivaUI_autogen app/PreventivaUI_autogen_timestamp_deps app/libPreventivaUI.a tests/gui/GuiTests_autogen_timestamp_deps
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target UnitDomainTests
+
+
+#############################################
+# Order-only phony target for UnitDomainTests
+
+build cmake_object_order_depends_target_UnitDomainTests: phony || tests/unit/UnitDomainTests_autogen tests/unit/UnitDomainTests_autogen/mocs_compilation.cpp tests/unit/UnitDomainTests_autogen/timestamp tests/unit/UnitDomainTests_autogen_timestamp_deps
+
+build tests/unit/CMakeFiles/UnitDomainTests.dir/UnitDomainTests_autogen/mocs_compilation.cpp.o: CXX_COMPILER__UnitDomainTests_ /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/unit/UnitDomainTests_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_UnitDomainTests
+  DEFINES = -DPREVENTIVA_SDK -DQT_CORE_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\"/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/unit\" -DQT_TESTCASE_SOURCEDIR=\"/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/tests/unit\" -DQT_TESTLIB_LIB
+  DEP_FILE = tests/unit/CMakeFiles/UnitDomainTests.dir/UnitDomainTests_autogen/mocs_compilation.cpp.o.d
+  FLAGS = -fPIC -std=gnu++17
+  INCLUDES = -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/unit/UnitDomainTests_autogen/include -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/sdk/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtTest -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++
+  OBJECT_DIR = tests/unit/CMakeFiles/UnitDomainTests.dir
+  OBJECT_FILE_DIR = tests/unit/CMakeFiles/UnitDomainTests.dir/UnitDomainTests_autogen
+  TARGET_COMPILE_PDB = tests/unit/CMakeFiles/UnitDomainTests.dir/
+  TARGET_PDB = bin/UnitDomainTests.pdb
+
+build tests/unit/CMakeFiles/UnitDomainTests.dir/UnitDomainTests.cpp.o: CXX_COMPILER__UnitDomainTests_ /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/tests/unit/UnitDomainTests.cpp || cmake_object_order_depends_target_UnitDomainTests
+  DEFINES = -DPREVENTIVA_SDK -DQT_CORE_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\"/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/unit\" -DQT_TESTCASE_SOURCEDIR=\"/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/tests/unit\" -DQT_TESTLIB_LIB
+  DEP_FILE = tests/unit/CMakeFiles/UnitDomainTests.dir/UnitDomainTests.cpp.o.d
+  FLAGS = -fPIC -std=gnu++17
+  INCLUDES = -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/unit/UnitDomainTests_autogen/include -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/sdk/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtTest -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++
+  OBJECT_DIR = tests/unit/CMakeFiles/UnitDomainTests.dir
+  OBJECT_FILE_DIR = tests/unit/CMakeFiles/UnitDomainTests.dir
+  TARGET_COMPILE_PDB = tests/unit/CMakeFiles/UnitDomainTests.dir/
+  TARGET_PDB = bin/UnitDomainTests.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target UnitDomainTests
+
+
+#############################################
+# Link the executable bin/UnitDomainTests
+
+build bin/UnitDomainTests: CXX_EXECUTABLE_LINKER__UnitDomainTests_ tests/unit/CMakeFiles/UnitDomainTests.dir/UnitDomainTests_autogen/mocs_compilation.cpp.o tests/unit/CMakeFiles/UnitDomainTests.dir/UnitDomainTests.cpp.o | /usr/lib/x86_64-linux-gnu/libQt6Test.so.6.2.4 /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.2.4 || tests/unit/UnitDomainTests_autogen tests/unit/UnitDomainTests_autogen_timestamp_deps
+  LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libQt6Test.so.6.2.4  /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.2.4
+  OBJECT_DIR = tests/unit/CMakeFiles/UnitDomainTests.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_COMPILE_PDB = tests/unit/CMakeFiles/UnitDomainTests.dir/
+  TARGET_FILE = bin/UnitDomainTests
+  TARGET_PDB = bin/UnitDomainTests.pdb
+
+# =============================================================================
+# Object build statements for EXECUTABLE target UnitInfraTests
+
+
+#############################################
+# Order-only phony target for UnitInfraTests
+
+build cmake_object_order_depends_target_UnitInfraTests: phony || tests/unit/UnitInfraTests_autogen tests/unit/UnitInfraTests_autogen/mocs_compilation.cpp tests/unit/UnitInfraTests_autogen/timestamp tests/unit/UnitInfraTests_autogen_timestamp_deps
+
+build tests/unit/CMakeFiles/UnitInfraTests.dir/UnitInfraTests_autogen/mocs_compilation.cpp.o: CXX_COMPILER__UnitInfraTests_ /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/unit/UnitInfraTests_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_UnitInfraTests
+  DEFINES = -DPREVENTIVA_SDK -DQT_CORE_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\"/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/unit\" -DQT_TESTCASE_SOURCEDIR=\"/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/tests/unit\" -DQT_TESTLIB_LIB
+  DEP_FILE = tests/unit/CMakeFiles/UnitInfraTests.dir/UnitInfraTests_autogen/mocs_compilation.cpp.o.d
+  FLAGS = -fPIC -std=gnu++17
+  INCLUDES = -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/unit/UnitInfraTests_autogen/include -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/sdk/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtTest -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++
+  OBJECT_DIR = tests/unit/CMakeFiles/UnitInfraTests.dir
+  OBJECT_FILE_DIR = tests/unit/CMakeFiles/UnitInfraTests.dir/UnitInfraTests_autogen
+  TARGET_COMPILE_PDB = tests/unit/CMakeFiles/UnitInfraTests.dir/
+  TARGET_PDB = bin/UnitInfraTests.pdb
+
+build tests/unit/CMakeFiles/UnitInfraTests.dir/UnitInfraTests.cpp.o: CXX_COMPILER__UnitInfraTests_ /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/tests/unit/UnitInfraTests.cpp || cmake_object_order_depends_target_UnitInfraTests
+  DEFINES = -DPREVENTIVA_SDK -DQT_CORE_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\"/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/unit\" -DQT_TESTCASE_SOURCEDIR=\"/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/tests/unit\" -DQT_TESTLIB_LIB
+  DEP_FILE = tests/unit/CMakeFiles/UnitInfraTests.dir/UnitInfraTests.cpp.o.d
+  FLAGS = -fPIC -std=gnu++17
+  INCLUDES = -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/unit/UnitInfraTests_autogen/include -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/sdk/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtTest -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++
+  OBJECT_DIR = tests/unit/CMakeFiles/UnitInfraTests.dir
+  OBJECT_FILE_DIR = tests/unit/CMakeFiles/UnitInfraTests.dir
+  TARGET_COMPILE_PDB = tests/unit/CMakeFiles/UnitInfraTests.dir/
+  TARGET_PDB = bin/UnitInfraTests.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target UnitInfraTests
+
+
+#############################################
+# Link the executable bin/UnitInfraTests
+
+build bin/UnitInfraTests: CXX_EXECUTABLE_LINKER__UnitInfraTests_ tests/unit/CMakeFiles/UnitInfraTests.dir/UnitInfraTests_autogen/mocs_compilation.cpp.o tests/unit/CMakeFiles/UnitInfraTests.dir/UnitInfraTests.cpp.o | /usr/lib/x86_64-linux-gnu/libQt6Test.so.6.2.4 /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.2.4 || tests/unit/UnitInfraTests_autogen tests/unit/UnitInfraTests_autogen_timestamp_deps
+  LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libQt6Test.so.6.2.4  /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.2.4
+  OBJECT_DIR = tests/unit/CMakeFiles/UnitInfraTests.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_COMPILE_PDB = tests/unit/CMakeFiles/UnitInfraTests.dir/
+  TARGET_FILE = bin/UnitInfraTests
+  TARGET_PDB = bin/UnitInfraTests.pdb
+
+
+#############################################
+# Utility command for test
+
+build tests/unit/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/unit && /usr/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build tests/unit/test: phony tests/unit/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build tests/unit/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/unit && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build tests/unit/edit_cache: phony tests/unit/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build tests/unit/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/unit && /usr/bin/cmake --regenerate-during-build -S/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation -B/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build tests/unit/rebuild_cache: phony tests/unit/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for UnitDomainTests_autogen_timestamp_deps
+
+build tests/unit/UnitDomainTests_autogen_timestamp_deps: phony tests/unit/CMakeFiles/UnitDomainTests_autogen_timestamp_deps
+
+
+#############################################
+# Utility command for UnitDomainTests_autogen
+
+build tests/unit/UnitDomainTests_autogen: phony tests/unit/CMakeFiles/UnitDomainTests_autogen tests/unit/UnitDomainTests_autogen/timestamp tests/unit/UnitDomainTests_autogen/mocs_compilation.cpp tests/unit/UnitDomainTests_autogen_timestamp_deps
+
+
+#############################################
+# Utility command for UnitInfraTests_autogen_timestamp_deps
+
+build tests/unit/UnitInfraTests_autogen_timestamp_deps: phony tests/unit/CMakeFiles/UnitInfraTests_autogen_timestamp_deps
+
+
+#############################################
+# Utility command for UnitInfraTests_autogen
+
+build tests/unit/UnitInfraTests_autogen: phony tests/unit/CMakeFiles/UnitInfraTests_autogen tests/unit/UnitInfraTests_autogen/timestamp tests/unit/UnitInfraTests_autogen/mocs_compilation.cpp tests/unit/UnitInfraTests_autogen_timestamp_deps
+
+
+#############################################
+# Custom command for tests/unit/UnitDomainTests_autogen/timestamp
+
+build tests/unit/UnitDomainTests_autogen/timestamp tests/unit/UnitDomainTests_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}tests/unit/UnitDomainTests_autogen/timestamp ${cmake_ninja_workdir}tests/unit/UnitDomainTests_autogen/mocs_compilation.cpp: CUSTOM_COMMAND /usr/lib/qt6/libexec/moc /usr/lib/qt6/libexec/uic || tests/unit/UnitDomainTests_autogen_timestamp_deps
+  COMMAND = cd /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/unit && /usr/bin/cmake -E cmake_autogen /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/unit/CMakeFiles/UnitDomainTests_autogen.dir/AutogenInfo.json "" && /usr/bin/cmake -E touch /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/unit/UnitDomainTests_autogen/timestamp && /usr/bin/cmake -E cmake_transform_depfile Ninja gccdepfile /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/tests/unit /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/unit /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/unit/UnitDomainTests_autogen/deps /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/CMakeFiles/d/00d9808782d79073cd866d7900d3bf04046570422b727ccbec2e18a806f43e19.d
+  DESC = Automatic MOC and UIC for target UnitDomainTests
+  depfile = /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/CMakeFiles/d/00d9808782d79073cd866d7900d3bf04046570422b727ccbec2e18a806f43e19.d
+  restat = 1
+
+
+#############################################
+# Custom command for tests/unit/UnitInfraTests_autogen/timestamp
+
+build tests/unit/UnitInfraTests_autogen/timestamp tests/unit/UnitInfraTests_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}tests/unit/UnitInfraTests_autogen/timestamp ${cmake_ninja_workdir}tests/unit/UnitInfraTests_autogen/mocs_compilation.cpp: CUSTOM_COMMAND /usr/lib/qt6/libexec/moc /usr/lib/qt6/libexec/uic || tests/unit/UnitInfraTests_autogen_timestamp_deps
+  COMMAND = cd /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/unit && /usr/bin/cmake -E cmake_autogen /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/unit/CMakeFiles/UnitInfraTests_autogen.dir/AutogenInfo.json "" && /usr/bin/cmake -E touch /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/unit/UnitInfraTests_autogen/timestamp && /usr/bin/cmake -E cmake_transform_depfile Ninja gccdepfile /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/tests/unit /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/unit /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/unit/UnitInfraTests_autogen/deps /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/CMakeFiles/d/1a6dd87b1aa6c94061335aa23f1e6598e3f20802e08d9416e056312146e4a7fb.d
+  DESC = Automatic MOC and UIC for target UnitInfraTests
+  depfile = /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/CMakeFiles/d/1a6dd87b1aa6c94061335aa23f1e6598e3f20802e08d9416e056312146e4a7fb.d
+  restat = 1
+
+
+#############################################
+# Phony custom command for tests/unit/CMakeFiles/UnitDomainTests_autogen_timestamp_deps
+
+build tests/unit/CMakeFiles/UnitDomainTests_autogen_timestamp_deps | ${cmake_ninja_workdir}tests/unit/CMakeFiles/UnitDomainTests_autogen_timestamp_deps: phony /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.2.4 /usr/lib/qt6/libexec/moc /usr/lib/x86_64-linux-gnu/libQt6Test.so.6.2.4 /usr/lib/qt6/libexec/uic
+
+
+#############################################
+# Phony custom command for tests/unit/CMakeFiles/UnitDomainTests_autogen
+
+build tests/unit/CMakeFiles/UnitDomainTests_autogen | ${cmake_ninja_workdir}tests/unit/CMakeFiles/UnitDomainTests_autogen: phony tests/unit/UnitDomainTests_autogen/timestamp || tests/unit/UnitDomainTests_autogen_timestamp_deps
+
+
+#############################################
+# Phony custom command for tests/unit/CMakeFiles/UnitInfraTests_autogen_timestamp_deps
+
+build tests/unit/CMakeFiles/UnitInfraTests_autogen_timestamp_deps | ${cmake_ninja_workdir}tests/unit/CMakeFiles/UnitInfraTests_autogen_timestamp_deps: phony /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.2.4 /usr/lib/qt6/libexec/moc /usr/lib/x86_64-linux-gnu/libQt6Test.so.6.2.4 /usr/lib/qt6/libexec/uic
+
+
+#############################################
+# Phony custom command for tests/unit/CMakeFiles/UnitInfraTests_autogen
+
+build tests/unit/CMakeFiles/UnitInfraTests_autogen | ${cmake_ninja_workdir}tests/unit/CMakeFiles/UnitInfraTests_autogen: phony tests/unit/UnitInfraTests_autogen/timestamp || tests/unit/UnitInfraTests_autogen_timestamp_deps
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/CMakeLists.txt
+# =============================================================================
+
+# =============================================================================
+# Object build statements for EXECUTABLE target FunctionalGuiTests
+
+
+#############################################
+# Order-only phony target for FunctionalGuiTests
+
+build cmake_object_order_depends_target_FunctionalGuiTests: phony || cmake_object_order_depends_target_PreventivaUI tests/functional/FunctionalGuiTests_autogen tests/functional/FunctionalGuiTests_autogen/mocs_compilation.cpp tests/functional/FunctionalGuiTests_autogen/timestamp tests/functional/FunctionalGuiTests_autogen_timestamp_deps
+
+build tests/functional/CMakeFiles/FunctionalGuiTests.dir/FunctionalGuiTests_autogen/mocs_compilation.cpp.o: CXX_COMPILER__FunctionalGuiTests_ /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/functional/FunctionalGuiTests_autogen/mocs_compilation.cpp || cmake_object_order_depends_target_FunctionalGuiTests
+  DEFINES = -DPREVENTIVA_SDK -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\"/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/functional\" -DQT_TESTCASE_SOURCEDIR=\"/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/tests/functional\" -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = tests/functional/CMakeFiles/FunctionalGuiTests.dir/FunctionalGuiTests_autogen/mocs_compilation.cpp.o.d
+  FLAGS = -fPIC -std=gnu++17
+  INCLUDES = -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/functional/FunctionalGuiTests_autogen/include -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/sdk/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtTest -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets
+  OBJECT_DIR = tests/functional/CMakeFiles/FunctionalGuiTests.dir
+  OBJECT_FILE_DIR = tests/functional/CMakeFiles/FunctionalGuiTests.dir/FunctionalGuiTests_autogen
+  TARGET_COMPILE_PDB = tests/functional/CMakeFiles/FunctionalGuiTests.dir/
+  TARGET_PDB = bin/FunctionalGuiTests.pdb
+
+build tests/functional/CMakeFiles/FunctionalGuiTests.dir/FunctionalGuiTests.cpp.o: CXX_COMPILER__FunctionalGuiTests_ /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/tests/functional/FunctionalGuiTests.cpp || cmake_object_order_depends_target_FunctionalGuiTests
+  DEFINES = -DPREVENTIVA_SDK -DQT_CORE_LIB -DQT_GUI_LIB -DQT_NO_DEBUG -DQT_TESTCASE_BUILDDIR=\"/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/functional\" -DQT_TESTCASE_SOURCEDIR=\"/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/tests/functional\" -DQT_TESTLIB_LIB -DQT_WIDGETS_LIB
+  DEP_FILE = tests/functional/CMakeFiles/FunctionalGuiTests.dir/FunctionalGuiTests.cpp.o.d
+  FLAGS = -fPIC -std=gnu++17
+  INCLUDES = -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/functional/FunctionalGuiTests_autogen/include -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app -I/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/sdk/include -isystem /usr/include/x86_64-linux-gnu/qt6/QtTest -isystem /usr/include/x86_64-linux-gnu/qt6 -isystem /usr/include/x86_64-linux-gnu/qt6/QtCore -isystem /usr/lib/x86_64-linux-gnu/qt6/mkspecs/linux-g++ -isystem /usr/include/x86_64-linux-gnu/qt6/QtGui -isystem /usr/include/x86_64-linux-gnu/qt6/QtWidgets
+  OBJECT_DIR = tests/functional/CMakeFiles/FunctionalGuiTests.dir
+  OBJECT_FILE_DIR = tests/functional/CMakeFiles/FunctionalGuiTests.dir
+  TARGET_COMPILE_PDB = tests/functional/CMakeFiles/FunctionalGuiTests.dir/
+  TARGET_PDB = bin/FunctionalGuiTests.pdb
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target FunctionalGuiTests
+
+
+#############################################
+# Link the executable bin/FunctionalGuiTests
+
+build bin/FunctionalGuiTests: CXX_EXECUTABLE_LINKER__FunctionalGuiTests_ tests/functional/CMakeFiles/FunctionalGuiTests.dir/FunctionalGuiTests_autogen/mocs_compilation.cpp.o tests/functional/CMakeFiles/FunctionalGuiTests.dir/FunctionalGuiTests.cpp.o | /usr/lib/x86_64-linux-gnu/libQt6Test.so.6.2.4 app/libPreventivaUI.a /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.2.4 /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.2.4 /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.2.4 /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libOpenGL.so || app/libPreventivaUI.a tests/functional/FunctionalGuiTests_autogen tests/functional/FunctionalGuiTests_autogen_timestamp_deps
+  LINK_LIBRARIES = /usr/lib/x86_64-linux-gnu/libQt6Test.so.6.2.4  app/libPreventivaUI.a  /usr/lib/x86_64-linux-gnu/libQt6Widgets.so.6.2.4  /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.2.4  /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.2.4  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libOpenGL.so
+  OBJECT_DIR = tests/functional/CMakeFiles/FunctionalGuiTests.dir
+  POST_BUILD = cd /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/functional && /usr/bin/cmake -E make_directory /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/bin/../plugins && /usr/bin/cmake -E copy_directory /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/plugins /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/bin/../plugins
+  PRE_LINK = :
+  TARGET_COMPILE_PDB = tests/functional/CMakeFiles/FunctionalGuiTests.dir/
+  TARGET_FILE = bin/FunctionalGuiTests
+  TARGET_PDB = bin/FunctionalGuiTests.pdb
+
+
+#############################################
+# Utility command for test
+
+build tests/functional/CMakeFiles/test.util: CUSTOM_COMMAND
+  COMMAND = cd /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/functional && /usr/bin/ctest --force-new-ctest-process
+  DESC = Running tests...
+  pool = console
+  restat = 1
+
+build tests/functional/test: phony tests/functional/CMakeFiles/test.util
+
+
+#############################################
+# Utility command for edit_cache
+
+build tests/functional/CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/functional && /usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build tests/functional/edit_cache: phony tests/functional/CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build tests/functional/CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/functional && /usr/bin/cmake --regenerate-during-build -S/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation -B/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build tests/functional/rebuild_cache: phony tests/functional/CMakeFiles/rebuild_cache.util
+
+
+#############################################
+# Utility command for FunctionalGuiTests_autogen_timestamp_deps
+
+build tests/functional/FunctionalGuiTests_autogen_timestamp_deps: phony tests/functional/CMakeFiles/FunctionalGuiTests_autogen_timestamp_deps app/libPreventivaUI.a
+
+
+#############################################
+# Utility command for FunctionalGuiTests_autogen
+
+build tests/functional/FunctionalGuiTests_autogen: phony tests/functional/CMakeFiles/FunctionalGuiTests_autogen tests/functional/FunctionalGuiTests_autogen/timestamp tests/functional/FunctionalGuiTests_autogen/mocs_compilation.cpp tests/functional/FunctionalGuiTests_autogen_timestamp_deps
+
+
+#############################################
+# Custom command for tests/functional/FunctionalGuiTests_autogen/timestamp
+
+build tests/functional/FunctionalGuiTests_autogen/timestamp tests/functional/FunctionalGuiTests_autogen/mocs_compilation.cpp | ${cmake_ninja_workdir}tests/functional/FunctionalGuiTests_autogen/timestamp ${cmake_ninja_workdir}tests/functional/FunctionalGuiTests_autogen/mocs_compilation.cpp: CUSTOM_COMMAND /usr/lib/qt6/libexec/moc /usr/lib/qt6/libexec/uic || app/PreventivaUI_autogen app/PreventivaUI_autogen_timestamp_deps app/libPreventivaUI.a tests/functional/FunctionalGuiTests_autogen_timestamp_deps
+  COMMAND = cd /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/functional && /usr/bin/cmake -E cmake_autogen /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/functional/CMakeFiles/FunctionalGuiTests_autogen.dir/AutogenInfo.json "" && /usr/bin/cmake -E touch /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/functional/FunctionalGuiTests_autogen/timestamp && /usr/bin/cmake -E cmake_transform_depfile Ninja gccdepfile /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/tests/functional /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/functional /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/functional/FunctionalGuiTests_autogen/deps /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/CMakeFiles/d/771636f97edb06a3f0a7677957e6ef37eed2ca406dfef8560d5b6f052518504c.d
+  DESC = Automatic MOC and UIC for target FunctionalGuiTests
+  depfile = /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/CMakeFiles/d/771636f97edb06a3f0a7677957e6ef37eed2ca406dfef8560d5b6f052518504c.d
+  restat = 1
+
+
+#############################################
+# Phony custom command for tests/functional/CMakeFiles/FunctionalGuiTests_autogen_timestamp_deps
+
+build tests/functional/CMakeFiles/FunctionalGuiTests_autogen_timestamp_deps | ${cmake_ninja_workdir}tests/functional/CMakeFiles/FunctionalGuiTests_autogen_timestamp_deps: phony app/libPreventivaUI.a /usr/lib/qt6/libexec/moc /usr/lib/x86_64-linux-gnu/libQt6Test.so.6.2.4 /usr/lib/qt6/libexec/uic || app/PreventivaUI_autogen app/PreventivaUI_autogen_timestamp_deps app/libPreventivaUI.a
+
+
+#############################################
+# Phony custom command for tests/functional/CMakeFiles/FunctionalGuiTests_autogen
+
+build tests/functional/CMakeFiles/FunctionalGuiTests_autogen | ${cmake_ninja_workdir}tests/functional/CMakeFiles/FunctionalGuiTests_autogen: phony tests/functional/FunctionalGuiTests_autogen/timestamp || app/PreventivaUI_autogen app/PreventivaUI_autogen_timestamp_deps app/libPreventivaUI.a tests/functional/FunctionalGuiTests_autogen_timestamp_deps
+
+# =============================================================================
 # Target aliases.
+
+build FunctionalGuiTests: phony bin/FunctionalGuiTests
+
+build FunctionalGuiTests_autogen: phony tests/functional/FunctionalGuiTests_autogen
+
+build FunctionalGuiTests_autogen_timestamp_deps: phony tests/functional/FunctionalGuiTests_autogen_timestamp_deps
+
+build GuiTests: phony bin/GuiTests
+
+build GuiTests_autogen: phony tests/gui/GuiTests_autogen
+
+build GuiTests_autogen_timestamp_deps: phony tests/gui/GuiTests_autogen_timestamp_deps
 
 build PreventivaApp: phony bin/PreventivaApp
 
@@ -431,9 +1012,29 @@ build PreventivaMaintenancePlugin_autogen: phony plugins/maintenance_service/Pre
 
 build PreventivaMaintenancePlugin_autogen_timestamp_deps: phony plugins/maintenance_service/PreventivaMaintenancePlugin_autogen_timestamp_deps
 
+build PreventivaUI: phony app/libPreventivaUI.a
+
+build PreventivaUI_autogen: phony app/PreventivaUI_autogen
+
+build PreventivaUI_autogen_timestamp_deps: phony app/PreventivaUI_autogen_timestamp_deps
+
+build UnitDomainTests: phony bin/UnitDomainTests
+
+build UnitDomainTests_autogen: phony tests/unit/UnitDomainTests_autogen
+
+build UnitDomainTests_autogen_timestamp_deps: phony tests/unit/UnitDomainTests_autogen_timestamp_deps
+
+build UnitInfraTests: phony bin/UnitInfraTests
+
+build UnitInfraTests_autogen: phony tests/unit/UnitInfraTests_autogen
+
+build UnitInfraTests_autogen_timestamp_deps: phony tests/unit/UnitInfraTests_autogen_timestamp_deps
+
 build docs: phony docs/docs
 
 build libPreventivaMaintenancePlugin.so: phony plugins/libPreventivaMaintenancePlugin.so
+
+build libPreventivaUI.a: phony app/libPreventivaUI.a
 
 # =============================================================================
 # Folder targets.
@@ -443,14 +1044,14 @@ build libPreventivaMaintenancePlugin.so: phony plugins/libPreventivaMaintenanceP
 #############################################
 # Folder: /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build
 
-build all: phony sdk/all plugins/maintenance_service/all app/all docs/all
+build all: phony sdk/all plugins/maintenance_service/all app/all docs/all tests/gui/all tests/unit/all tests/functional/all
 
 # =============================================================================
 
 #############################################
 # Folder: /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app
 
-build app/all: phony bin/PreventivaApp
+build app/all: phony app/libPreventivaUI.a bin/PreventivaApp
 
 # =============================================================================
 
@@ -474,20 +1075,41 @@ build plugins/maintenance_service/all: phony plugins/libPreventivaMaintenancePlu
 build sdk/all: phony
 
 # =============================================================================
+
+#############################################
+# Folder: /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/functional
+
+build tests/functional/all: phony bin/FunctionalGuiTests
+
+# =============================================================================
+
+#############################################
+# Folder: /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/gui
+
+build tests/gui/all: phony bin/GuiTests
+
+# =============================================================================
+
+#############################################
+# Folder: /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/unit
+
+build tests/unit/all: phony bin/UnitDomainTests bin/UnitInfraTests
+
+# =============================================================================
 # Built-in targets
 
 
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../app/CMakeLists.txt ../docs/CMakeLists.txt ../plugins/maintenance_service/CMakeLists.txt ../sdk/CMakeLists.txt /usr/lib/x86_64-linux-gnu/cmake/Qt6/3rdparty/kwin/FindXKB.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/FindWrapAtomic.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/FindWrapOpenGL.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/FindWrapVulkanHeaders.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Config.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigExtras.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Dependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Targets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6VersionlessTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtFeature.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtFeatureCommon.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicCMakeHelpers.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicDependencyHelpers.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicFinalizerHelpers.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicFindPackageHelpers.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicPluginHelpers.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicTargetHelpers.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicWalkLibsHelpers.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfigExtras.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreMacros.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreVersionlessTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsAdditionalTargetInfo.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsVersionlessTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusAdditionalTargetInfo.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusMacros.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusVersionlessTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsAdditionalTargetInfo.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsVersionlessTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiAdditionalTargetInfo.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiVersionlessTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsAdditionalTargetInfo.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsVersionlessTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsAdditionalTargetInfo.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake /usr/share/cmake-3.22/Modules/CMakeCXXCompiler.cmake.in /usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp /usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeCompilerIdDetection.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCXXCompiler.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCompileFeatures.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCompiler.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCompilerABI.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCompilerId.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineSystem.cmake /usr/share/cmake-3.22/Modules/CMakeFindBinUtils.cmake /usr/share/cmake-3.22/Modules/CMakeFindDependencyMacro.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeNinjaFindMake.cmake /usr/share/cmake-3.22/Modules/CMakeParseArguments.cmake /usr/share/cmake-3.22/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/share/cmake-3.22/Modules/CMakeParseImplicitLinkInfo.cmake /usr/share/cmake-3.22/Modules/CMakeParseLibraryArchitecture.cmake /usr/share/cmake-3.22/Modules/CMakeSystem.cmake.in /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/CMakeTestCXXCompiler.cmake /usr/share/cmake-3.22/Modules/CMakeTestCompilerCommon.cmake /usr/share/cmake-3.22/Modules/CheckCXXCompilerFlag.cmake /usr/share/cmake-3.22/Modules/CheckCXXSourceCompiles.cmake /usr/share/cmake-3.22/Modules/CheckIncludeFile.cxx.in /usr/share/cmake-3.22/Modules/CheckIncludeFileCXX.cmake /usr/share/cmake-3.22/Modules/CheckLibraryExists.cmake /usr/share/cmake-3.22/Modules/Compiler/ADSP-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/ARMCC-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/ARMClang-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/AppleClang-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Borland-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/Clang-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /usr/share/cmake-3.22/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Cray-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/GHS-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-FindBinUtils.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/IAR-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /usr/share/cmake-3.22/Modules/Compiler/Intel-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/MSVC-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/NVHPC-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/PGI-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/PathScale-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/SCO-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/TI-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Watcom-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/FeatureSummary.cmake /usr/share/cmake-3.22/Modules/FindDoxygen.cmake /usr/share/cmake-3.22/Modules/FindOpenGL.cmake /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.22/Modules/FindPackageMessage.cmake /usr/share/cmake-3.22/Modules/FindPkgConfig.cmake /usr/share/cmake-3.22/Modules/FindThreads.cmake /usr/share/cmake-3.22/Modules/FindVulkan.cmake /usr/share/cmake-3.22/Modules/Internal/CheckCompilerFlag.cmake /usr/share/cmake-3.22/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake-3.22/Modules/Internal/FeatureTesting.cmake /usr/share/cmake-3.22/Modules/MacroAddFileDependencies.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-Determine-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux.cmake /usr/share/cmake-3.22/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt ../app/CMakeLists.txt ../docs/CMakeLists.txt ../plugins/maintenance_service/CMakeLists.txt ../sdk/CMakeLists.txt ../tests/functional/CMakeLists.txt ../tests/gui/CMakeLists.txt ../tests/unit/CMakeLists.txt /usr/lib/x86_64-linux-gnu/cmake/Qt6/3rdparty/kwin/FindXKB.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/FindWrapAtomic.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/FindWrapOpenGL.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/FindWrapVulkanHeaders.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Config.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigExtras.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Dependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Targets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6VersionlessTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtFeature.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtFeatureCommon.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicCMakeHelpers.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicDependencyHelpers.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicFinalizerHelpers.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicFindPackageHelpers.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicPluginHelpers.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicTargetHelpers.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicWalkLibsHelpers.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfigExtras.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreMacros.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreVersionlessTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsAdditionalTargetInfo.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsVersionlessTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusAdditionalTargetInfo.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusMacros.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusVersionlessTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsAdditionalTargetInfo.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsVersionlessTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiAdditionalTargetInfo.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiVersionlessTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsAdditionalTargetInfo.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Test/Qt6TestAdditionalTargetInfo.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Test/Qt6TestConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Test/Qt6TestConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Test/Qt6TestConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Test/Qt6TestDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Test/Qt6TestTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Test/Qt6TestTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Test/Qt6TestVersionlessTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsVersionlessTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsAdditionalTargetInfo.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake /usr/share/cmake-3.22/Modules/CMakeCXXCompiler.cmake.in /usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp /usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeCompilerIdDetection.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCXXCompiler.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCompileFeatures.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCompiler.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCompilerABI.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCompilerId.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineSystem.cmake /usr/share/cmake-3.22/Modules/CMakeFindBinUtils.cmake /usr/share/cmake-3.22/Modules/CMakeFindDependencyMacro.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeNinjaFindMake.cmake /usr/share/cmake-3.22/Modules/CMakeParseArguments.cmake /usr/share/cmake-3.22/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/share/cmake-3.22/Modules/CMakeParseImplicitLinkInfo.cmake /usr/share/cmake-3.22/Modules/CMakeParseLibraryArchitecture.cmake /usr/share/cmake-3.22/Modules/CMakeSystem.cmake.in /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/CMakeTestCXXCompiler.cmake /usr/share/cmake-3.22/Modules/CMakeTestCompilerCommon.cmake /usr/share/cmake-3.22/Modules/CheckCXXCompilerFlag.cmake /usr/share/cmake-3.22/Modules/CheckCXXSourceCompiles.cmake /usr/share/cmake-3.22/Modules/CheckIncludeFile.cxx.in /usr/share/cmake-3.22/Modules/CheckIncludeFileCXX.cmake /usr/share/cmake-3.22/Modules/CheckLibraryExists.cmake /usr/share/cmake-3.22/Modules/Compiler/ADSP-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/ARMCC-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/ARMClang-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/AppleClang-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Borland-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/Clang-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /usr/share/cmake-3.22/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Cray-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/GHS-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-FindBinUtils.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/IAR-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /usr/share/cmake-3.22/Modules/Compiler/Intel-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/MSVC-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/NVHPC-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/PGI-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/PathScale-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/SCO-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/TI-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Watcom-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/FeatureSummary.cmake /usr/share/cmake-3.22/Modules/FindDoxygen.cmake /usr/share/cmake-3.22/Modules/FindOpenGL.cmake /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.22/Modules/FindPackageMessage.cmake /usr/share/cmake-3.22/Modules/FindPkgConfig.cmake /usr/share/cmake-3.22/Modules/FindThreads.cmake /usr/share/cmake-3.22/Modules/FindVulkan.cmake /usr/share/cmake-3.22/Modules/Internal/CheckCompilerFlag.cmake /usr/share/cmake-3.22/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake-3.22/Modules/Internal/FeatureTesting.cmake /usr/share/cmake-3.22/Modules/MacroAddFileDependencies.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-Determine-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux.cmake /usr/share/cmake-3.22/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build ../CMakeLists.txt ../app/CMakeLists.txt ../docs/CMakeLists.txt ../plugins/maintenance_service/CMakeLists.txt ../sdk/CMakeLists.txt /usr/lib/x86_64-linux-gnu/cmake/Qt6/3rdparty/kwin/FindXKB.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/FindWrapAtomic.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/FindWrapOpenGL.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/FindWrapVulkanHeaders.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Config.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigExtras.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Dependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Targets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6VersionlessTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtFeature.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtFeatureCommon.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicCMakeHelpers.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicDependencyHelpers.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicFinalizerHelpers.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicFindPackageHelpers.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicPluginHelpers.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicTargetHelpers.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicWalkLibsHelpers.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfigExtras.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreMacros.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreVersionlessTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsAdditionalTargetInfo.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsVersionlessTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusAdditionalTargetInfo.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusMacros.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusVersionlessTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsAdditionalTargetInfo.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsVersionlessTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiAdditionalTargetInfo.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiVersionlessTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsAdditionalTargetInfo.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsVersionlessTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsAdditionalTargetInfo.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake /usr/share/cmake-3.22/Modules/CMakeCXXCompiler.cmake.in /usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp /usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeCompilerIdDetection.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCXXCompiler.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCompileFeatures.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCompiler.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCompilerABI.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCompilerId.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineSystem.cmake /usr/share/cmake-3.22/Modules/CMakeFindBinUtils.cmake /usr/share/cmake-3.22/Modules/CMakeFindDependencyMacro.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeNinjaFindMake.cmake /usr/share/cmake-3.22/Modules/CMakeParseArguments.cmake /usr/share/cmake-3.22/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/share/cmake-3.22/Modules/CMakeParseImplicitLinkInfo.cmake /usr/share/cmake-3.22/Modules/CMakeParseLibraryArchitecture.cmake /usr/share/cmake-3.22/Modules/CMakeSystem.cmake.in /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/CMakeTestCXXCompiler.cmake /usr/share/cmake-3.22/Modules/CMakeTestCompilerCommon.cmake /usr/share/cmake-3.22/Modules/CheckCXXCompilerFlag.cmake /usr/share/cmake-3.22/Modules/CheckCXXSourceCompiles.cmake /usr/share/cmake-3.22/Modules/CheckIncludeFile.cxx.in /usr/share/cmake-3.22/Modules/CheckIncludeFileCXX.cmake /usr/share/cmake-3.22/Modules/CheckLibraryExists.cmake /usr/share/cmake-3.22/Modules/Compiler/ADSP-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/ARMCC-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/ARMClang-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/AppleClang-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Borland-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/Clang-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /usr/share/cmake-3.22/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Cray-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/GHS-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-FindBinUtils.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/IAR-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /usr/share/cmake-3.22/Modules/Compiler/Intel-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/MSVC-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/NVHPC-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/PGI-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/PathScale-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/SCO-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/TI-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Watcom-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/FeatureSummary.cmake /usr/share/cmake-3.22/Modules/FindDoxygen.cmake /usr/share/cmake-3.22/Modules/FindOpenGL.cmake /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.22/Modules/FindPackageMessage.cmake /usr/share/cmake-3.22/Modules/FindPkgConfig.cmake /usr/share/cmake-3.22/Modules/FindThreads.cmake /usr/share/cmake-3.22/Modules/FindVulkan.cmake /usr/share/cmake-3.22/Modules/Internal/CheckCompilerFlag.cmake /usr/share/cmake-3.22/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake-3.22/Modules/Internal/FeatureTesting.cmake /usr/share/cmake-3.22/Modules/MacroAddFileDependencies.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-Determine-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux.cmake /usr/share/cmake-3.22/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake: phony
+build ../CMakeLists.txt ../app/CMakeLists.txt ../docs/CMakeLists.txt ../plugins/maintenance_service/CMakeLists.txt ../sdk/CMakeLists.txt ../tests/functional/CMakeLists.txt ../tests/gui/CMakeLists.txt ../tests/unit/CMakeLists.txt /usr/lib/x86_64-linux-gnu/cmake/Qt6/3rdparty/kwin/FindXKB.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/FindWrapAtomic.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/FindWrapOpenGL.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/FindWrapVulkanHeaders.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Config.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigExtras.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Dependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Targets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6VersionlessTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtFeature.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtFeatureCommon.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicCMakeHelpers.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicDependencyHelpers.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicFinalizerHelpers.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicFindPackageHelpers.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicPluginHelpers.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicTargetHelpers.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicWalkLibsHelpers.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreAdditionalTargetInfo.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfigExtras.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreMacros.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Core/Qt6CoreVersionlessTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsAdditionalTargetInfo.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6CoreTools/Qt6CoreToolsVersionlessTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusAdditionalTargetInfo.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusMacros.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBus/Qt6DBusVersionlessTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsAdditionalTargetInfo.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6DBusTools/Qt6DBusToolsVersionlessTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiAdditionalTargetInfo.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Gui/Qt6GuiVersionlessTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsAdditionalTargetInfo.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6GuiTools/Qt6GuiToolsVersionlessTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Test/Qt6TestAdditionalTargetInfo.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Test/Qt6TestConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Test/Qt6TestConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Test/Qt6TestConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Test/Qt6TestDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Test/Qt6TestTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Test/Qt6TestTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Test/Qt6TestVersionlessTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsAdditionalTargetInfo.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsMacros.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6Widgets/Qt6WidgetsVersionlessTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsAdditionalTargetInfo.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfig.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersion.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsConfigVersionImpl.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsDependencies.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets-none.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsTargets.cmake /usr/lib/x86_64-linux-gnu/cmake/Qt6WidgetsTools/Qt6WidgetsToolsVersionlessTargets.cmake /usr/share/cmake-3.22/Modules/CMakeCXXCompiler.cmake.in /usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp /usr/share/cmake-3.22/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.22/Modules/CMakeCheckCompilerFlagCommonPatterns.cmake /usr/share/cmake-3.22/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.22/Modules/CMakeCompilerIdDetection.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCXXCompiler.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCompileFeatures.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCompiler.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCompilerABI.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineCompilerId.cmake /usr/share/cmake-3.22/Modules/CMakeDetermineSystem.cmake /usr/share/cmake-3.22/Modules/CMakeFindBinUtils.cmake /usr/share/cmake-3.22/Modules/CMakeFindDependencyMacro.cmake /usr/share/cmake-3.22/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.22/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.22/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.22/Modules/CMakeNinjaFindMake.cmake /usr/share/cmake-3.22/Modules/CMakeParseArguments.cmake /usr/share/cmake-3.22/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/share/cmake-3.22/Modules/CMakeParseImplicitLinkInfo.cmake /usr/share/cmake-3.22/Modules/CMakeParseLibraryArchitecture.cmake /usr/share/cmake-3.22/Modules/CMakeSystem.cmake.in /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.22/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.22/Modules/CMakeTestCXXCompiler.cmake /usr/share/cmake-3.22/Modules/CMakeTestCompilerCommon.cmake /usr/share/cmake-3.22/Modules/CheckCXXCompilerFlag.cmake /usr/share/cmake-3.22/Modules/CheckCXXSourceCompiles.cmake /usr/share/cmake-3.22/Modules/CheckIncludeFile.cxx.in /usr/share/cmake-3.22/Modules/CheckIncludeFileCXX.cmake /usr/share/cmake-3.22/Modules/CheckLibraryExists.cmake /usr/share/cmake-3.22/Modules/Compiler/ADSP-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/ARMCC-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/ARMClang-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/AppleClang-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Borland-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.22/Modules/Compiler/Clang-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /usr/share/cmake-3.22/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Cray-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/GHS-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU-FindBinUtils.cmake /usr/share/cmake-3.22/Modules/Compiler/GNU.cmake /usr/share/cmake-3.22/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/IAR-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /usr/share/cmake-3.22/Modules/Compiler/Intel-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/MSVC-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/NVHPC-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/PGI-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/PathScale-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/SCO-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/TI-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/Watcom-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /usr/share/cmake-3.22/Modules/FeatureSummary.cmake /usr/share/cmake-3.22/Modules/FindDoxygen.cmake /usr/share/cmake-3.22/Modules/FindOpenGL.cmake /usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake /usr/share/cmake-3.22/Modules/FindPackageMessage.cmake /usr/share/cmake-3.22/Modules/FindPkgConfig.cmake /usr/share/cmake-3.22/Modules/FindThreads.cmake /usr/share/cmake-3.22/Modules/FindVulkan.cmake /usr/share/cmake-3.22/Modules/Internal/CheckCompilerFlag.cmake /usr/share/cmake-3.22/Modules/Internal/CheckSourceCompiles.cmake /usr/share/cmake-3.22/Modules/Internal/FeatureTesting.cmake /usr/share/cmake-3.22/Modules/MacroAddFileDependencies.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-Determine-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.22/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.22/Modules/Platform/Linux.cmake /usr/share/cmake-3.22/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.22.1/CMakeCXXCompiler.cmake CMakeFiles/3.22.1/CMakeSystem.cmake: phony
 
 
 #############################################

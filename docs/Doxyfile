@@ -1,5 +1,4 @@
-# Doxyfile mínimo
-PROJECT_NAME           = "PreventivaMec_QtImplementation"
+PROJECT_NAME           = "PreventivaMecQt"
 OUTPUT_DIRECTORY       = docs
 GENERATE_HTML          = YES
 GENERATE_LATEX         = NO

@@ -1,6 +1,0 @@
-<map id="/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/sdk/include/preventiva/IMaintenanceService.h" name="/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/sdk/include/preventiva/IMaintenanceService.h">
-<area shape="rect" id="node1" title="Interface para serviços de manutenção preventiva (carregados via plugin DLL)." alt="" coords="135,5,402,105"/>
-<area shape="rect" id="node2" href="$ServiceLocator_8h.html" title="Fachada/Service Locator para obter serviços (plugin + repositórios)." alt="" coords="5,161,257,246"/>
-<area shape="rect" id="node4" href="$MaintenanceServicePlugin_8h_source.html" title=" " alt="" coords="281,153,533,253"/>
-<area shape="rect" id="node3" href="$MainWindow_8h_source.html" title=" " alt="" coords="5,301,257,387"/>
-</map>

@@ -11,57 +11,7 @@
 	"CMAKE_SOURCE_DIR" : "/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation",
 	"DEP_FILE" : "/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app/PreventivaApp_autogen/deps",
 	"DEP_FILE_RULE_NAME" : "PreventivaApp_autogen/timestamp",
-	"HEADERS" : 
-	[
-		[
-			"/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app/MainWindow.h",
-			"MU",
-			"EWIEGA46WW/moc_MainWindow.cpp",
-			null
-		],
-		[
-			"/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app/ServiceLocator.h",
-			"MU",
-			"EWIEGA46WW/moc_ServiceLocator.cpp",
-			null
-		],
-		[
-			"/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app/domain/MaintenanceFactory.h",
-			"MU",
-			"ZIYP446TXO/moc_MaintenanceFactory.cpp",
-			null
-		],
-		[
-			"/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app/domain/SchedulingStrategy.h",
-			"MU",
-			"ZIYP446TXO/moc_SchedulingStrategy.cpp",
-			null
-		],
-		[
-			"/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app/infrastructure/ConsoleLogger.h",
-			"MU",
-			"4PK47B5JKE/moc_ConsoleLogger.cpp",
-			null
-		],
-		[
-			"/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app/infrastructure/ILogger.h",
-			"MU",
-			"4PK47B5JKE/moc_ILogger.cpp",
-			null
-		],
-		[
-			"/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app/infrastructure/JsonMachineRepository.h",
-			"MU",
-			"4PK47B5JKE/moc_JsonMachineRepository.cpp",
-			null
-		],
-		[
-			"/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app/infrastructure/QtEmailAdapter.h",
-			"MU",
-			"4PK47B5JKE/moc_QtEmailAdapter.cpp",
-			null
-		]
-	],
+	"HEADERS" : [],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
 	"INCLUDE_DIR" : "/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app/PreventivaApp_autogen/include",
 	"MOC_COMPILATION_FILE" : "/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app/PreventivaApp_autogen/mocs_compilation.cpp",
@@ -110,7 +60,11 @@
 	],
 	"MOC_PREDEFS_FILE" : "/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app/PreventivaApp_autogen/moc_predefs.h",
 	"MOC_RELAXED_MODE" : false,
-	"MOC_SKIP" : [],
+	"MOC_SKIP" : 
+	[
+		"/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app/PreventivaUI_autogen/include/ui_MainWindow.h",
+		"/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app/PreventivaUI_autogen/mocs_compilation.cpp"
+	],
 	"MULTI_CONFIG" : false,
 	"PARALLEL" : 4,
 	"PARSE_CACHE_FILE" : "/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app/CMakeFiles/PreventivaApp_autogen.dir/ParseCache.txt",
@@ -122,41 +76,6 @@
 	"SOURCES" : 
 	[
 		[
-			"/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app/MainWindow.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app/ServiceLocator.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app/domain/MaintenanceFactory.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app/domain/SchedulingStrategy.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app/infrastructure/ConsoleLogger.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app/infrastructure/JsonMachineRepository.cpp",
-			"MU",
-			null
-		],
-		[
-			"/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app/infrastructure/QtEmailAdapter.cpp",
-			"MU",
-			null
-		],
-		[
 			"/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app/main.cpp",
 			"MU",
 			null
@@ -164,7 +83,11 @@
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],
-	"UIC_SKIP" : [],
+	"UIC_SKIP" : 
+	[
+		"/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app/PreventivaUI_autogen/include/ui_MainWindow.h",
+		"/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app/PreventivaUI_autogen/mocs_compilation.cpp"
+	],
 	"UIC_UI_FILES" : [],
 	"VERBOSITY" : 0
 }

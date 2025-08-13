@@ -1,8 +1,0 @@
-<map id="/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app/domain/MaintenanceFactory.h" name="/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/app/domain/MaintenanceFactory.h">
-<area shape="rect" id="node1" title="Padrão Factory para instanciar estratégias a partir de uma policy." alt="" coords="76,5,328,91"/>
-<area shape="rect" id="node2" href="$SchedulingStrategy_8h.html" title="Padrão Strategy para cálculo de próxima manutenção." alt="" coords="5,139,164,165"/>
-<area shape="rect" id="node4" href="$Types_8h.html" title="Tipos básicos compartilhados entre App e Plugins." alt="" coords="123,213,268,240"/>
-<area shape="rect" id="node6" title=" " alt="" coords="239,139,317,165"/>
-<area shape="rect" id="node3" title=" " alt="" coords="38,288,134,315"/>
-<area shape="rect" id="node5" title=" " alt="" coords="160,288,231,315"/>
-</map>

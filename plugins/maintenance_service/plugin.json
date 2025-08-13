@@ -1,7 +1,5 @@
-{
-  "IID": "br.sejaefi.preventiva.IMaintenanceService/1.0",
+{ "IID": "br.sejaefi.preventiva.IMaintenanceService/1.0",
   "className": "MaintenanceServicePlugin",
   "version": "1.0",
   "vendor": "Efí Demo",
-  "description": "Serviço de manutenção preventiva via plugin."
-}
+  "description": "Serviço de manutenção preventiva via plugin." }

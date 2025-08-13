@@ -1,5 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classDomain_1_1ISchedulingStrategy.html" title=" " alt="" coords="5,31,216,57"/>
-<area shape="rect" id="node2" href="$classDomain_1_1TimeBasedStrategy.html" title="Por tempo (ex.: +6 meses)" alt="" coords="268,5,477,32"/>
-<area shape="rect" id="node3" href="$classDomain_1_1UsageBasedStrategy.html" title="Por uso (ex.: +250h / +750h) — aqui simulamos dias aproximados." alt="" coords="264,56,481,83"/>
-</map>

@@ -1,1 +1,1 @@
-// Intencionalmente vazio: somente headers suficientes para demo.
+// vazio (headers-only para demo)

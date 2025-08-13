@@ -1,7 +1,3 @@
-/**
- * @file IMaintenanceService.h
- * @brief Interface para serviços de manutenção preventiva (carregados via plugin DLL).
- */
 #pragma once
 #include <QtPlugin>
 #include <QString>
@@ -10,23 +6,13 @@
 
 namespace Preventiva {
 
-class IMachineRepository;
-class IAlertService;
+class IMachineRepository; class IAlertService;
 
-class IMaintenanceService
-{
+class IMaintenanceService {
 public:
     virtual ~IMaintenanceService() = default;
-
-    /// Configuração de dependências (DI) fornecidas pela aplicação
     virtual void setDependencies(IMachineRepository* repo, IAlertService* alerts) = 0;
-
-    /// Planeja e registra uma OS de manutenção para a máquina informada.
-    virtual MaintenanceOrder schedule(const QString& machineId,
-                                      SchedulePolicy policy,
-                                      const QString& notes) = 0;
-
-    /// Lista histórico de OS para uma máquina.
+    virtual MaintenanceOrder schedule(const QString& machineId, SchedulePolicy policy, const QString& notes) = 0;
     virtual QVector<MaintenanceOrder> history(const QString& machineId) const = 0;
 };
 

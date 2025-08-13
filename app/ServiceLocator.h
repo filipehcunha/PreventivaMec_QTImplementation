@@ -1,7 +1,3 @@
-/**
- * @file ServiceLocator.h
- * @brief Fachada/Service Locator para obter serviços (plugin + repositórios).
- */
 #pragma once
 #include <QString>
 #include <QDir>
@@ -13,16 +9,12 @@
 
 class ServiceLocator {
 public:
-    ServiceLocator();
-    ~ServiceLocator();
-
+    ServiceLocator(); ~ServiceLocator();
     Preventiva::IMaintenanceService* maintenance();
     Preventiva::IMachineRepository* machineRepository();
     Preventiva::IAlertService* alertService();
-
 private:
     QObject* loadPlugin(const QString& iid);
-
     QScopedPointer<Preventiva::IMachineRepository> m_repo;
     QScopedPointer<Preventiva::IAlertService> m_alerts;
     QScopedPointer<QObject> m_pluginObj;

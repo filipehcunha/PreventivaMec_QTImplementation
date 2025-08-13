@@ -1,7 +1,0 @@
-<map id="/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/sdk/include/preventiva/IMachineRepository.h" name="/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/sdk/include/preventiva/IMachineRepository.h">
-<area shape="rect" id="node1" title="Abstração de acesso a dados de máquinas." alt="" coords="305,5,622,91"/>
-<area shape="rect" id="node2" href="$JsonMachineRepository_8h_source.html" title=" " alt="" coords="5,146,313,231"/>
-<area shape="rect" id="node3" href="$ServiceLocator_8h.html" title="Fachada/Service Locator para obter serviços (plugin + repositórios)." alt="" coords="337,146,589,231"/>
-<area shape="rect" id="node5" href="$MaintenanceServicePlugin_8h_source.html" title=" " alt="" coords="613,139,865,239"/>
-<area shape="rect" id="node4" href="$MainWindow_8h_source.html" title=" " alt="" coords="337,287,589,372"/>
-</map>
