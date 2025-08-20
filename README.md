@@ -1,12 +1,35 @@
-# PreventivaMecQt (Demo c/ Testes GUI)
+# PreventivaMec (Qt/C++) — Arquitetura limpa, baixo acoplamento e testes funcionais
 
-Projeto Qt/CMake com padrões, camadas, plugin DLL e **testes automatizados de GUI (Qt Test)**.
-Use `ctest -R Gui` para rodar.
+## Stack
+- **Qt 6 (Core, Test)** — sinais/slots, containers, QDate, QTest
+- **CMake 3.21+** — build moderno
+- **Padrões**: Repository, Policy/Strategy, Composite, Observer (signals/slots), DI via factory (`wireApp`)
 
-## Build rápido (WSL/Ubuntu)
+## Como compilar
 ```bash
-sudo apt update && sudo apt install -y build-essential cmake ninja-build qt6-base-dev qt6-base-dev-tools libgl1-mesa-dev doxygen graphviz
-cmake -S . -B build -G Ninja
-cmake --build build
-ctest --test-dir build -R Gui -V
+mkdir build && cd build
+cmake -DCMAKE_PREFIX_PATH=/path/para/Qt/6.x/gcc_64 ..
+cmake --build . -j
+ctest --output-on-failure
 ```
+
+- Binários:
+  - `preventiva_cli` — demonstração de fluxo
+  - `preventiva_tests` — testes (unitários + funcionais end-to-end simples)
+
+## Organização
+```
+src/
+  core/         # Entidades de domínio
+  app/          # Casos de uso, serviços e políticas (Strategy/Composite)
+  infrastructure/
+    memory/     # Repositórios em memória (para testes/MVP)
+    email/      # Dispatcher fake p/ captura de alertas
+  cli/          # App de linha de comando de demonstração
+tests/          # Qt Test: cenários funcionais automatizados
+```
+
+## Extensões sugeridas
+- Adicionar `Qt::Sql` com repositório SQLite; manter as interfaces para baixo acoplamento.
+- Serviço em segundo plano (PreventivAlert) usando `QTimer` e `QSettings` para intervalo de verificação.
+- Camada de apresentação (Qt Widgets/QML) conectando-se apenas à API de casos de uso.

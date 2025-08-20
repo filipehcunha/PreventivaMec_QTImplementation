@@ -1,4 +1,4 @@
-# Install script for directory: /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation
+# Install script for directory: /home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint2/PreventivaMec_QTImplementation
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,37 +44,12 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/sdk/cmake_install.cmake")
+  include("/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint2/PreventivaMec_QTImplementation/build/src/cmake_install.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for the subdirectory.
-  include("/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/plugins/maintenance_service/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/app/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/docs/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/gui/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/unit/cmake_install.cmake")
-endif()
-
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for the subdirectory.
-  include("/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/tests/functional/cmake_install.cmake")
+  include("/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint2/PreventivaMec_QTImplementation/build/tests/cmake_install.cmake")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -85,5 +60,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint1/PreventivaMec_QTImplementation/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/filipehcunha/EngenhariaSoftwareI/sprint_grupo/sprint2/PreventivaMec_QTImplementation/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

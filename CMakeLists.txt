@@ -1,28 +1,18 @@
 cmake_minimum_required(VERSION 3.21)
-project(PreventivaMecQt VERSION 0.1 LANGUAGES CXX)
+project(PreventivaMec LANGUAGES CXX)
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+# Enable Qt's automatic processing of MOC/UIC/RCC
 set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTORCC ON)
+set(CMAKE_AUTOUIC ON)
 
-# Output dirs
-if(NOT CMAKE_RUNTIME_OUTPUT_DIRECTORY)
-  set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
-endif()
-if(NOT CMAKE_LIBRARY_OUTPUT_DIRECTORY)
-  set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/plugins)
-endif()
-
-find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets Test)
-
-add_subdirectory(sdk)
-add_subdirectory(plugins/maintenance_service)
-add_subdirectory(app)
-add_subdirectory(docs)
+# Find Qt6 (Core, Test)
+find_package(Qt6 6.2 REQUIRED COMPONENTS Core Test)
 
 enable_testing()
-add_subdirectory(tests/gui)
-add_subdirectory(tests/unit)
-add_subdirectory(tests/functional)
+
+add_subdirectory(src)
+add_subdirectory(tests)

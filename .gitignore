@@ -1,0 +1,89 @@
+# ---- Build artifacts (C/C++) ----
+*.o
+*.obj
+*.lo
+*.la
+*.a
+*.lib
+*.dll
+*.dylib
+*.so
+*.so.*
+*.exe
+*.out
+*.app
+
+# ---- Qt (gerados pelo MOC/UIC/RCC) ----
+moc_*.cpp
+moc_*.h
+*.moc
+ui_*.h
+qrc_*.cpp
+*_autogen/
+*.qm
+*.qhc
+*.qch
+.qmake.stash
+
+# ---- CMake ----
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Testing/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+CMakeUserPresets.json
+# Remova se quiser versionar para clangd/IDE:
+compile_commands.json
+
+# ---- Pastas de build ----
+build/
+build-*/
+cmake-build-*/
+out/
+bin/
+lib/
+
+# ---- Qt Creator ----
+*.user
+*.user.*
+*.pro.user
+*.qbs.user
+*.qbs.user.*
+*.creator
+*.creator.user
+.qtcreator/
+.qt/
+
+# ---- IDEs / Editores ----
+.vscode/
+.idea/
+*.iml
+*.swp
+*.swo
+
+# ---- Arquivos do SO ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- Cobertura ----
+*.gcda
+*.gcno
+*.gcov
+*.lcov
+coverage/
+coverage.info
+
+# ---- Logs & misc ----
+*.log
+.cache/
+clangd/
+.clangd/
+*.zip
+*.tar.gz
+
+# ---- Binários específicos do projeto ----
+preventiva_tests
+preventiva_cli
